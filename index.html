@@ -1,12 +1,32 @@
 <html>
     <head>
+        <title>AChanger</title>
         <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     </head>
     <body>
         <nav>
+            <h1>AChanger</h1>
             <a> Panier</a>
             <a> Compte</a>
         </nav>
+        <div class="searcher">
+            <h2>Filtre</h2>
+            <h3>Prix</h3>
+            <input type="range" min="0" max="140" value="50" class="slider" id="priceRange">
+            <h3>Catégorie
+                <select name="cars" id="cars">
+                    <option value="volvo">SUS</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+            </h3>
+            <button>Appliquer</button>
+
+        </div>
+
     </body>
     <footer>
         BROCOLI SoftGames ©

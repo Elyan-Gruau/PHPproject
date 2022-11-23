@@ -12,3 +12,14 @@ nav a{
 body{
     margin: 0;
 }
+
+h1{
+
+    max-width: 50%;
+    margin-right: 0;
+    float: left;
+}
+
+:root{
+    font:'Quicksand', sans-serif;
+}

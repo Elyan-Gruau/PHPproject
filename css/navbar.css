@@ -12,7 +12,7 @@ nav :first-child{
     background-color: rgb(255,255,255);
 }
 
-a {
+nav a {
     float: right;
     height: 60px;
     width: 10%;

@@ -1,10 +1,11 @@
 .card {
-    height: 30%;
-    width: 20%;
-    background-color: var(--Col1);
+    height: 35%;
+    width: 25%;
+    background-color: var(--ColCardBg);
     border-radius: 5px;
     display: inline-block;
     margin: 0 2% 2% 2%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
 }
 
 .card p {
@@ -16,14 +17,43 @@
     text-shadow: 3px 1px 10px;
     color: rgb(255,240,240);
     border-radius: 3px;
-    width: 50%;
+    width: 60%;
+    text-align: center;
+    font-size: large;
+    float: left;
+    margin-top: 0px;
 }
 .card .price {
 
 }
+.card .cont1{
+    width:100%;
+    float: left;
+
+}
+.card .cont2{
+    width:100%;
+    float: left
+}
+
+.card .bestSeller{
+    background-color: rgb(185, 0, 0);
+    width: 60%;
+    border-radius: 3px;
+
+    text-align: center;
+    font-weight: bold;
+    color: rgb(248, 237, 219);
+}
+
+.card:hover {
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.7) ;
+}
 
 
 .card img{
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 5px;
+    float: left;
 }

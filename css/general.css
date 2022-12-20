@@ -1,0 +1,25 @@
+:root{
+    --Col1 : rgb(240,210,146);
+    --Col2 : rgb(92,49,24);
+    --Col3 : rgb(56,43,36);
+    --ColDark1 : rgb(36,45,56);
+    --ColDark2 : rgb(26,35,46);
+}
+
+
+
+
+body{
+    margin: 0 ;
+    background-color: var(--ColDark1);
+}
+
+#products{
+
+}
+
+#page{
+    width: 80%;
+    margin: 0 10% 0 10%;
+    background-color: var(--ColDark2);
+}

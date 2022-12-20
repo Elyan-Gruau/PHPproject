@@ -1,0 +1,29 @@
+.card {
+    height: 30%;
+    width: 20%;
+    background-color: var(--Col1);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 2% 2% 2%;
+}
+
+.card p {
+    margin:3px;
+}
+
+.card .price{
+    background-color: var(--Col3);
+    text-shadow: 3px 1px 10px;
+    color: rgb(255,240,240);
+    border-radius: 3px;
+    width: 50%;
+}
+.card .price {
+
+}
+
+
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}

@@ -1,0 +1,22 @@
+nav {
+    background-color: var(--ColDark2);
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--Col3);
+}
+
+nav :first-child{
+    float: left;
+    width: 30%;
+    background-color: rgb(255,255,255);
+}
+
+a {
+    float: right;
+    height: 60px;
+    width: 10%;
+    background-color: var(--Col2);
+    text-align:center;
+    padding-top: 20px;
+}

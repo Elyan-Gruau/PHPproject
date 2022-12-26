@@ -2,6 +2,7 @@
     --Col1 : rgb(240,210,146);
     --Col2 : rgb(92,49,24);
     --Col3 : rgb(56,43,36);
+    --ColDark0 : rgb(31,40,51);
     --ColDark1 : rgb(36,45,56);
     --ColDark2 : rgb(26,35,46);
     --ColBg1 : rgb(230,230,235);
@@ -11,10 +12,15 @@
 
 
 
-
+/*
+TODO: Rendre les cartes cliquable pour qu'elles génèrent leur page.
+ */
 body{
     margin: 0 ;
     background-color: var(--ColBg1);
+    /*overflow: overlay;
+
+     */
 }
 
 footer{
@@ -22,12 +28,49 @@ footer{
     background-color: var(--ColBlack);
     height: 120px;
 }
-#products{
-
+.searcher{
+    padding-top: 60px;
 }
 
 #page{
     width: 80%;
     margin: 0 10% 0 10%;
     background-color: var(--ColDark2);
+}
+
+
+
+/*******************/
+/*     SCROLL BAR  */
+/*******************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*background: var(--ColBg1);
+
+     */
+    z-index: 9;
+    background:white;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--ColDark1);
+    box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.2);
+    min-height: 20% ;
+    transition: box ease-in-out 0.2s;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ColDark0);
+    box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.5);
+    transition: box ease-in 0.15s;
 }

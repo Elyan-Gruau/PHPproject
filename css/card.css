@@ -6,6 +6,7 @@
     display: inline-block;
     margin: 0 2% 2% 2%;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+    transition: box-shadow ease-in-out 0.2s;
 }
 
 .card p {
@@ -13,7 +14,7 @@
 }
 
 .card .price{
-    background-color: var(--Col3);
+    background-color: var(--ColDark2);
     text-shadow: 3px 1px 10px;
     color: rgb(255,240,240);
     border-radius: 3px;
@@ -23,9 +24,7 @@
     float: left;
     margin-top: 0px;
 }
-.card .price {
 
-}
 .card .cont1{
     width:100%;
     float: left;
@@ -48,6 +47,7 @@
 
 .card:hover {
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.7) ;
+    transition: box-shadow ease-in 0.15s;
 }
 
 

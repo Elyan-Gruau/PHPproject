@@ -4,6 +4,8 @@ nav {
     height: 60px;
     overflow: hidden;
     border-bottom: 1px solid var(--Col3);
+    position: fixed;
+    z-index: 10;
 }
 
 nav :first-child{
@@ -15,8 +17,17 @@ nav :first-child{
 nav a {
     float: right;
     height: 60px;
-    width: 10%;
+    width: 15%;
     background-color: var(--Col2);
     text-align:center;
     padding-top: 20px;
+    color: white;
+}
+
+.categories {
+    background-color: transparent;
+}
+
+#cart{
+    background-image: url(img);
 }

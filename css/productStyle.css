@@ -1,0 +1,29 @@
+.mainProductContainer{
+    background-color: rebeccapurple;
+    height: 100%;
+    width: 100%;
+}
+
+.centerProductContainer{
+    background-color: aqua;
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+    padding: 0 2% 0 2%;
+}
+
+
+.mainProductContainer .left {
+    float: left;
+    background-color: purple;
+    width : 40%;
+    height: 100%;
+}
+
+.mainProductContainer .right {
+    float: right;
+    background-color: blue;
+    width : 40%;
+    height: 100%;
+
+}

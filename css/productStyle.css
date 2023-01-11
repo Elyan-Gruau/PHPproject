@@ -23,7 +23,15 @@
 .mainProductContainer .right {
     float: right;
     background-color: blue;
-    width : 40%;
+    width : 55%;
     height: 100%;
+
+}
+
+.mainImg {
+    width:100%;
+}
+.otherImagesCont img{
+    height: 10%;
 
 }

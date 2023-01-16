@@ -91,6 +91,18 @@
     color: var(--ColBg1);
     font-weight: bold;
 }
+/*******************/
+/*  QTY SELECTOR   */
+/*******************/
+.qtySelectCont{
+    width: 50%;
+    float: left;
+}
+
+.currentSize p, .qtySelectCont p{
+    display: inline-block;
+}
+
 
 .sizeSelectCont a:hover{
     transition: all ease-in 0.15s;
@@ -99,6 +111,25 @@
 }
 
 
+.qtySelectCont label:after {
+    content: "<>";
+    font: 11px "Consolas", monospace;
+    color: #666;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 8px;
+    top: 2px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    pointer-events: none;
+}
+
+.qtySelectCont label {
+    position: relative;
+}
 
 /*******************/
 /*      CART       */
@@ -137,11 +168,3 @@
     float: left;
 }
 
-.qtySelectCont{
-    width: 50%;
-    float: left;
-}
-
-.currentSize p, .qtySelectCont p{
-    display: inline-block;
-}

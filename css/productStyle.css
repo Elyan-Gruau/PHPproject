@@ -1,37 +1,147 @@
 .mainProductContainer{
-    background-color: rebeccapurple;
+
     height: 100%;
     width: 100%;
 }
 
 .centerProductContainer{
-    background-color: aqua;
+    border-radius: 5px;
     width: 80%;
-    height: 100%;
+    height: 90%;
     margin: 0 10% 0 10%;
-    padding: 0 2% 0 2%;
+    padding: 2%;
+    background-color: var(--ColCardBg);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
 }
 
+.mainProductContainer h2{
+    margin-bottom: 0;
+}
 
 .mainProductContainer .left {
     float: left;
-    background-color: purple;
+    background-color: var(--ColTan);
     width : 40%;
-    height: 100%;
+    height: 90%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
 }
 
 .mainProductContainer .right {
     float: right;
-    background-color: blue;
+
     width : 55%;
     height: 100%;
 
 }
 
+.mainProductContainer .right, .mainProductContainer .left{
+    //background-color: var(--ColCardBg);
+
+    border-radius: 5px;
+}
+
 .mainImg {
     width:100%;
+    border-radius: 5px;
 }
 .otherImagesCont img{
     height: 10%;
 
+}
+
+.productTitle{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.productPrice{
+    background-color: var(--ColDark0);
+    text-shadow: 3px 1px 10px;
+    color: rgb(240, 255, 255);
+    border-radius: 3px;
+    font-size: xx-large;
+    width: 20%;
+    text-align: center;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5) ;
+}
+
+.productPrice p{
+    margin: 0;
+}
+
+.currentSize p{
+    margin-top:0;
+}
+
+
+/*******************/
+/*  SIZE SELECTOR  */
+/*******************/
+.sizeSelectCont a{
+    transition: all ease-in-out 0.2s;
+    margin: 0.5%;
+    color: rgb(240, 255, 255);
+    background-color: var(--ColTan);
+    height: 20px;
+    width: 50px;
+    text-align: center;
+    padding: 25px;
+    display: inline-grid;
+    border-radius: 5px;
+    color: var(--ColBg1);
+    font-weight: bold;
+}
+
+.sizeSelectCont a:hover{
+    transition: all ease-in 0.15s;
+    background-color: var(--ColBg1);
+    color: var(--ColTan);
+}
+
+
+
+/*******************/
+/*      CART       */
+/*******************/
+.addToCartCont{
+    float: right;
+
+    background-color: aqua;
+    width: 50%;
+}
+
+.addToCartCont button{
+    height: 60px;
+    width: 100%;
+    font-size: xx-large;
+    padding: 0
+    1% 0 1%;
+    border-radius: 5px;
+    background-color: var(--ColDark2);
+    border: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+    color: var(--ColBg1);
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 0px white ;
+    transition: all ease-in-out 0.2s;
+}
+.addToCartCont button:hover{
+    transition: all ease-in 0.15s;
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 15px white ;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5) ;
+
+}
+
+
+.descriptionCont{
+    text-align: justify;
+    float: left;
+}
+
+.qtySelectCont{
+    width: 50%;
+    float: left;
+}
+
+.currentSize p, .qtySelectCont p{
+    display: inline-block;
 }

@@ -1,0 +1,28 @@
+.mainConnexionContainer{
+    background-color: rebeccapurple;
+    height: 100%;
+    width: 100%;
+}
+
+.centerConnexionContainer{
+    background-color: aqua;
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+    padding: 0 2% 0 2%;
+}
+
+.centerConnexionContainer .left {
+    float: left;
+    background-color: purple;
+    width : 40%;
+    height: 100%;
+}
+
+.centerConnexionContainer .right {
+    float: right;
+    background-color: blue;
+    width : 55%;
+    height: 100%;
+
+}

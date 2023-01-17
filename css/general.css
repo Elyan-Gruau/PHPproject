@@ -10,6 +10,7 @@
     --ColCardBgHover : rgb(250,250,250);
     --ColBlack : rgb(25,25,30);
     --ColTan : rgb(148, 104, 81);
+    --ColBlue : rgb(25, 71, 121);
 }
 
 
@@ -23,6 +24,7 @@ body{
     /*overflow: overlay;
 
      */
+    font-family: "Monsterrat", sans-serif;
 }
 
 footer{

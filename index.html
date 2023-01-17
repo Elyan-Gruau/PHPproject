@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/cartReviewStyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat">
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="img/logo.png">
     </head>
@@ -208,24 +209,26 @@
                     <div class="left">
                         <form>
                             <h3>Déja client ?</h3>
-                            <input autocomplete="off" name="customerLogEmail" type="email">
                             <label name="customerLogEmail">Email</label>
-                            <input autocomplete="off" name="customerLogPassword" type="email">
+                            <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com">
                             <label name="customerLogPassword">Mot de passe</label>
+                            <input autocomplete="password" name="customerLogPassword" type="password" placeholder="Mot de passe">
+
                             <button inputmode="submit">Connexion</button>
                         </form>
                     </div>
                     <div class="right">
                         <form>
                             <h3>Nouveau client ?</h3>
-                            <input autocomplete="off" name="customerLogFirstName" type="email">
                             <label name="customerLogFirstName">Prénom</label>
-                            <input autocomplete="off" name="customerLogLastName" type="email">
+                            <input autocomplete="off" name="customerLogFirstName" type="firstname" placeholder="Roland" >
                             <label name="customerLogLastName">Nom</label>
-                            <input autocomplete="off" name="customerLogEmail" type="email">
+                            <input autocomplete="off" name="customerLogLastName" type="lastname" placeholder="Culé">
                             <label name="customerLogEmail">Email</label>
-                            <input autocomplete="off" name="customerLogPassword" type="email">
+                            <input autocomplete="off" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com">
                             <label name="customerLogPassword">Mot de passe</label>
+                            <input autocomplete="new-password" name="customerLogPassword" type="password" placeholder="Mot de passe" >
+
                             <button inputmode="submit">Créer un compte</button>
                         </form>
                     </div>

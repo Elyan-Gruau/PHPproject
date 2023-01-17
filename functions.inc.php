@@ -4,5 +4,16 @@ function pr($arr){
     print_r($arr);
 }
 
+function buildCard(){
+
+}
+
+function buildProductDetails(){
+
+}
+
+function buildCart(){
+
+}
 
 ?>

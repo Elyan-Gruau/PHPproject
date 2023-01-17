@@ -1,0 +1,158 @@
+.mainCartReviewCont {
+    width : 100%;
+    height : 100%;
+}
+
+.centerCartReviewCont {
+    background-color: var(--ColCardBg);
+    border-radius: 5px;
+    width: 80%;
+    height: 90%;
+    margin: 0 0% 0 10%;
+    padding: 2%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+}
+
+.centerCartReviewCont .left{
+    float: left;
+    width: 70%;
+}
+
+.centerCartReviewCont .right{
+    float: right;
+    background-color: var(--ColTan);
+    width: 20%;
+    height: 40%;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.centerCartReviewCont p{
+    display: inline-block;
+}
+
+.cartTotal{
+    font-weight: bold;
+}
+
+.cartHeader{
+    border-bottom: 2px solid var(--ColBg1);
+    height: 60px;
+    width: 100%;
+}
+
+.cartFooter{
+    border-top: 2px solid var(--ColBg1);
+    height: 60px;
+    width: 98%;
+    padding-right: 2%;
+}
+
+.cartFooter p{
+    float: right;
+
+}
+
+#cartPriceText{
+    float: right;
+    margin-right: 2%;
+
+}
+
+.centerCartReviewCont h3{
+    float: left;
+    font-size: 20px;
+    color: var(--ColDark2);
+}
+
+.cartProduct {
+    width: 96%;
+    min-height: 250px;
+    height: fit-content;
+    padding: 2%;
+}
+
+.cartProduct > * {
+    display: inline-block ;
+}
+
+.productImage img{
+    max-width: 230px;
+    max-height: 230px;
+    border-radius: 5px;
+
+}
+
+.productImage{
+    height: 230px;
+    max-width: 35%;
+    float: left;
+
+}
+
+.deleteFromCart{
+    color: var(--ColTan);
+    margin-top: 170px;
+}
+
+.priceCont > *{
+    display: block;
+
+
+}
+.priceCont {
+    float: right;
+    max-width: 10%;
+}
+
+.priceCont p{
+    float: right;
+}
+
+.productInformation{
+    height: 230px;
+    max-width: 65%;
+    float: left;
+    padding-left: 1%;
+
+}
+
+.productInformation > *{
+    display: block;
+
+}
+
+.productInformation p{
+    margin-top: 0;
+}
+
+.productInformation h4{
+    font-size: 18px;
+    color: var(--ColDark2);
+    margin-top: 0px;
+}
+
+.deleteFromCart:hover{
+    color: var(--ColDark0);
+}
+
+.cartCheckout{
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    padding: 0
+    1% 0 1%;
+    border-radius: 5px;
+    background-color: var(--ColDark2);
+    border: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+    color: var(--ColBg1);
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 0px white ;
+    transition: all ease-in-out 0.2s;
+}
+.cartCheckout:hover{
+    transition: all ease-in 0.15s;
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 15px white ;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5) ;
+
+}

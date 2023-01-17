@@ -19,10 +19,13 @@ nav a {
 
 .categories {
     background-color: transparent;
-
 }
 
-#cart{
+.nav a:not(.categories,.logoNavCont){
+    height: 160px;
+}
+
+#cart, #connexion{
     margin-top: -3%;
     width: 35px;
     height: 35px;

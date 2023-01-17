@@ -25,6 +25,7 @@
                 </div>
             </a>
             <a href="http://" ><img id="cart" src="img/cart.png" alt="Cart"> </a>
+            <a href="http://" ><img id="connexion" src="img/profile.png" alt="profile"></a>
             <a href="http://" class="categories">Chaussons</a>
             <a href="http://" class="categories">Sac à dos</a>
 
@@ -35,12 +36,15 @@
             <h3>Prix</h3>
             <input type="range" min="0" max="140" value="50" class="slider" id="priceRange">
             <h3>Catégorie
-                <select name="cars" id="cars">
-                    <option value="volvo">SUS</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                <label class="selector">
+                    <select name="cars" id="cars">
+                        <option value="volvo">SUS</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </label>
+
             </h3>
             <button>Appliquer</button>
 
@@ -201,11 +205,71 @@
         </section>
 
         <section class="devCartReview">
+            <div class="mainCartReviewCont">
+                <div class="centerCartReviewCont">
+                    <div class="left">
+                        <div class="cartHeader">
+                            <h3>Votre Panier</h3>
+                            <p id="cartPriceText">Prix</p>
+                        </div>
 
+                        <div class="cartProduct">
+                            <div class="productImage">
+                                <img src="img/Test1.jpg" alt="image">
+                            </div>
+
+                            <div class="productInformation">
+                                <div>
+                                    <h4>The banana chaussons</h4>
+                                    <p>Plus que </p>
+                                    <p>10</p>
+                                </div>
+                                <div>
+                                    <p> exemplaires</p>
+                                    <p>Taille: </p>
+                                    <p>36-37</p>
+                                </div>
+
+                                <label >
+                                    <select name="qty" id="productQtySelectorCart">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="priceCont">
+                                <p>19.99€</p>
+                                <a class="deleteFromCart">Supprimer</a>
+                            </div>
+
+                        </div>
+                        <div class="cartFooter">
+                            <p class="cartTotal">19.99€</p>
+                            <p>(2 articles):</p>
+                            <p>Sous-total </p>
+
+
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>Sous-total </p>
+                        <p>(2 articles): </p>
+                        <p class="cartTotal">19.99€</p>
+                        <button class="cartCheckout">Passer la commande</button>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="devConnexion">
-            <div class="mainConnexionContainer">
-                <div class="centerConnexionContainer">
+            <div class="mainConnexionCont">
+                <div class="centerConnexionCont">
                     <div class="left">
                         <form>
                             <h3>Déja client ?</h3>

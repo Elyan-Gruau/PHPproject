@@ -35,7 +35,7 @@
     float: left
 }
 
-.card .bestSeller{
+.card .BestSeller{
     background-color: rgb(185, 0, 0);
     width: 60%;
     border-radius: 3px;
@@ -57,4 +57,9 @@
     max-height: 250px;
     border-radius: 5px;
     float: left;
+}
+
+.card p{
+    text-decoration: none;
+    color: var(--ColDark0);
 }

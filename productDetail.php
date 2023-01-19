@@ -18,7 +18,7 @@
                     <p> 36</p>
                 </div>
                 <div class="productPrice">
-                    <p>19.99€</p>
+                    <p><?echo $price?>€</p>
                 </div>
                 <h3>Tailles disponibles</h3>
                 <div class="sizeSelectCont">

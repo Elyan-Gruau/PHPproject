@@ -8,8 +8,7 @@ function buildCard(){
 
 }
 
-function buildProductDetail($id){
-    global $dtm;
+function buildProductDetail($id,$price){
     return include("productDetail.php");
 }
 
@@ -19,15 +18,43 @@ function buildProductCard($id){
 }
 
 function buildCart(){
+    return include("cart.php");
+}
 
+function buildLogin(){
+    return include("login.php");
+}
+
+function buildShop(){
+    return include("shop.php");
+}
+
+function getAllInfoFromProduct($id){
+    //todo faire une map qui à toute les info du produit
+    //Prix
+    //Array de string des des tailles dispobiles
+    //String livraison
 }
 
 $oldP = "";
 if (isset($_GET['product'])!=$oldP){
-
     $oldP=isset($_GET['product']);
-    echo buildProductDetail(isset($_GET['product']));
+    echo buildProductDetail(isset($_GET['product']),229.99);
 }
+
+if (isset($_GET['cart'])){
+    echo buildCart();
+}
+
+if (isset($_GET['login'])){
+    echo buildLogin();
+}
+
+if (isset($_GET['shop'])){
+    echo buildShop();
+}
+
+
 
 
 ?>

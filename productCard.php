@@ -1,19 +1,25 @@
 <?php
-    $link=  "index.php?product=".$id;
+    $deliveryDays = 10;
+    $bestseller = 'Bestseller!';
+    $price = 15;
+    $title = "TEST TITLE";
+    $sold = 3015;
 ?>
-<div class="card">
-    <a href="index.php?product=<?=$id?>" >
+<a href="index.php?product=<?=$id?>" >
+    <div class="card">
+
         <img src="img/Test1.jpg" alt="image">
         <div class="cont1">
-            <p class="price">19.99€</p>
-            <p class="BestSeller">Bestseller!</p>
+            <p class="price"><?=15?>€</p>
+            <p class="BestSeller"><?=$bestseller?></p>
 
         </div>
         <div class="cont2">
-            <p class="title">The Royalty</p>
-            <p class="sold">3015 sold</p>
-            <p class="shipping">Shipping in 10 business days</p>
-            <p> DEBUG: <?php echo $id ?></p>
+            <p class="title"><?=$title?></p>
+            <p class="sold"><?=$sold?> vendus</p>
+            <p class="shipping">Expédition sous <?=  $deliveryDays?> jours </p>
+            <p> DEBUG: <?= $id ?></p>
         </div>
-    </a>
-</div>
+
+    </div>
+</a>

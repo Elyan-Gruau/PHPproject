@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="bottomCont">
-            <h2> [SLOGAN] </h2>
+            <h2>Embélissez vos pieds.</h2>
         </div>
     </div>
 

@@ -5,7 +5,7 @@
     padding-top: 60px;
     height: 30%;
     width: 100%;
-    background-image: url(https://media1.giphy.com/media/h6A92GcmWT3lFTY1NL/giphy.gif?cid=ecf05e47p9uzbcd0ubdcd3j63jj9g4cxhcfepad891yhae7n&rid=giphy.gif&ct=g) ;
+    background-image: url(https://media.giphy.com/media/DWz4YFSdC8v0Iaf3gg/giphy-downsized-large.gif) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -36,7 +36,7 @@
     font-style: normal;
     font-size: 120px;
     text-align: center;
-    background-image: url(https://media1.giphy.com/media/h6A92GcmWT3lFTY1NL/giphy.gif?cid=ecf05e47p9uzbcd0ubdcd3j63jj9g4cxhcfepad891yhae7n&rid=giphy.gif&ct=gf) ;
+    background-image: url(https://media.giphy.com/media/DWz4YFSdC8v0Iaf3gg/giphy-downsized-large.gif) ;
     background-size: cover;
     background-repeat: no-repeat;
      background-attachment: fixed;
@@ -92,4 +92,8 @@
     display: table-cell;
     vertical-align: middle;
     height: 100%;
+    font-family: 'Castellar';
+    font-weight : normal;
+    font-style: normal;
+
 }

@@ -5,9 +5,9 @@
     $title = "TEST TITLE";
     $sold = 3015;
 ?>
-<a href="index.php?product=<?=$id?>" >
-    <div class="card">
 
+<div class="card">
+    <a href="index.php?product=<?=$id?>" >
         <img src="img/Test1.jpg" alt="image">
         <div class="cont1">
             <p class="price"><?=15?>€</p>
@@ -20,6 +20,5 @@
             <p class="shipping">Expédition sous <?=  $deliveryDays?> jours </p>
             <p> DEBUG: <?= $id ?></p>
         </div>
-
-    </div>
-</a>
+     </a>
+</div>

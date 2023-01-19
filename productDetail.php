@@ -1,3 +1,9 @@
+<?php
+    $size = 36; //todo à changer
+    function changeSize($newSize){
+        $size = $newSize;
+    }
+?>
 <section class="devProductPage"  style="height: 900px; min-height: 900px">
     <div class="mainProductContainer">
         <div class="centerProductContainer">
@@ -52,7 +58,7 @@
                         <p> Plus que </p><p>10</p><p> paires disponibles.</p>
                     </div>
                     <div class="addToCartCont">
-                        <button> Ajouter au panier</button>
+                        <button>Ajouter au panier</button>
                     </div>
                     <div class="descriptionCont">
                         <h3>Description</h3>

@@ -1,9 +1,16 @@
 <?php
 include('functions.php');
 //$con=mysql_connect("localhost","root","","ecom");
-if (isset($_GET['shop'])==null){
+
+$homeurl = 'index.php';
+$homepage = "/";
+$currentpage = $_SERVER['REQUEST_URI'];
+
+if($currentpage == $homepage or $currentpage == 'index.php') {
+
     header('Location: '.'index.php?shop=True');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +45,7 @@ if (isset($_GET['shop'])==null){
     <footer>
         <p>
             BROCOLI SoftGames ©
-            GRUAU Elyan MAHÉ Jules
+            GRUAU Elyan - MAHÉ Jules
         </p>
         <ul>
             <li>

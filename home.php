@@ -1,10 +1,12 @@
 <div class="mainHomeCont">
     <div class="centerHomeCont">
-        <div class="titleCont">
-            <h1>LA BABOUCE*</h1>
+        <div class="top">
+            <div class="titleCont">
+                <h1>LA BABOUCE*</h1>
+            </div>
         </div>
-        <div class="buttonCont">
-             <a href="index.php?login">Connexion</a>
+        <div class="bottomCont">
+            <h2> [SLOGAN] </h2>
         </div>
     </div>
 

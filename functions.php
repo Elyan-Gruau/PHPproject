@@ -67,6 +67,7 @@ else if (isset($_GET['board'])){
 }
 else {
     echo buildHome();
+    echo buildShop();
 }
 
 

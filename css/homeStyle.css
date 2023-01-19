@@ -1,38 +1,95 @@
+:root{
+    --backgroundOffset: -600px;
+}
 .mainHomeCont{
-    padding-top: 50px;
-    height: 100%;
+    padding-top: 60px;
+    height: 30%;
     width: 100%;
+    background-image: url(https://media1.giphy.com/media/h6A92GcmWT3lFTY1NL/giphy.gif?cid=ecf05e47p9uzbcd0ubdcd3j63jj9g4cxhcfepad891yhae7n&rid=giphy.gif&ct=g) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: var(--backgroundOffset);
+
 }
 
 .centerHomeCont{
     border-radius: 5px;
     width: 100%;
-    height: 90%;
+    height: 100%;
 
-    padding: 2%;
+
     /*background-color: var(--ColTan);
-
+    background: linear-gradient(16deg, rgba(25,25,30,1) 21%, rgba(148,104,81,1) 51%, rgba(25,25,30,1) 92%);
     background: rgb(25,25,30);
      */
-    background: linear-gradient(16deg, rgba(25,25,30,1) 21%, rgba(148,104,81,1) 51%, rgba(25,25,30,1) 92%);
+
+    backdrop-filter: blur(50px);
+    background-color: rgba(11, 11, 11, 0.50);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+
 }
 
 .mainHomeCont h1{
-    background: url(https://media.giphy.com/media/yiEQMMQFZiJ05unHI1/giphy.gif)  ;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    text-align: center;
-    width: 100%;
     font-family: 'Castellar';
-    font-weight: normal;
+    font-weight : normal;
     font-style: normal;
     font-size: 120px;
+    text-align: center;
+    background-image: url(https://media1.giphy.com/media/h6A92GcmWT3lFTY1NL/giphy.gif?cid=ecf05e47p9uzbcd0ubdcd3j63jj9g4cxhcfepad891yhae7n&rid=giphy.gif&ct=gf) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+    background-position-y:  var(--backgroundOffset);
 
-    -webkit-text-stroke: 3px var(--ColBlue);
+    max-width: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    width: 100%;
+    height:100%;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    webkit-text-stroke: 3px rgba(0,0,0,0.1);
+    margin: 0;
+
+    float: inherit;
 
 }
 
 .mainHomeCont .titleCont{
+    width:100%;
+    height:100%;
+    display:table;
+
+
+}
+
+.mainHomeCont .top{
+    width: 80%;
+    height: 80%;
+    padding: 0 10% 0 10%;
+
+
+}
+
+.mainHomeCont .bottomCont{
+    background-color: var(--ColDark0);
+    height: 20%;
     width: 100%;
+
+    box-shadow:  -1px -1px 1px slategrey ;
+    border-bottom: 1px solid slategrey;
+    display:table;
+}
+
+.mainHomeCont h2{
+    color: var(--ColBg1);
+    margin: 0 ;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
 }

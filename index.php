@@ -25,7 +25,7 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
         <link rel="stylesheet" href="css/cartReviewStyle.css">
         <link rel="stylesheet" href="css/userBoardStyle.css">
         <link rel="stylesheet" href="css/homeStyle.css">
-        <link rel="preload" href="font/Castellar.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload"  href="font/Castellar.ttf" as="font" type="font/ttf" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat">

@@ -39,7 +39,7 @@
     background-image: url(https://media.giphy.com/media/DWz4YFSdC8v0Iaf3gg/giphy-downsized-large.gif) ;
     background-size: cover;
     background-repeat: no-repeat;
-     background-attachment: fixed;
+    background-attachment: fixed;
     background-position-y:  var(--backgroundOffset);
 
     max-width: 100%;
@@ -56,6 +56,9 @@
     margin: 0;
 
     float: inherit;
+
+    animation-name: titleFadeIn;
+    animation-duration: 2s;
 
 }
 
@@ -96,4 +99,45 @@
     font-weight : normal;
     font-style: normal;
 
+
+}
+
+@keyframes titleFadeIn {
+    0%   {
+        font-size: 12px;
+        filter: opacity(100);
+    }
+    10%  {
+        backdrop-filter: opacity(100);
+    }
+    20%  {
+        backdrop-filter: opacity(100);
+    }
+    30%  {
+        backdrop-filter: opacity(100);;
+    }
+    40%  {
+        backdrop-filter: opacity(100);
+    }
+    50%  {
+        backdrop-filter: opacity(100);
+    }
+    10%  {
+        backdrop-filter: opacity(100);
+    }
+    10%  {
+        backdrop-filter: opacity(100);
+    }
+    10%  {
+        backdrop-filter: opacity(100);
+    }
+    10%  {
+
+        backdrop-filter: opacity(100);
+    }
+    100% {
+
+        -webkit-text-fill-color: transparent;
+
+    }
 }

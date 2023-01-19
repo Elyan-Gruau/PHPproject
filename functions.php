@@ -1,4 +1,5 @@
 <?php
+
 function pr($arr){
     echo '<pre>';
     print_r($arr);
@@ -28,6 +29,9 @@ function buildLogin(){
 function buildShop(){
     return include("shop.php");
 }
+function buildBoard(){
+    return include("board.php");
+}
 
 function getAllInfoFromProduct($id){
     //todo faire une map qui à toute les info du produit
@@ -36,25 +40,34 @@ function getAllInfoFromProduct($id){
     //String livraison
 }
 
+function buildHome(){
+    return include("home.php");
+}
+
 $oldP = "";
 if (isset($_GET['product'])!=$oldP){
     $oldP=isset($_GET['product']);
     echo buildProductDetail(isset($_GET['product']),229.99);
 }
 
-if (isset($_GET['cart'])){
+else if (isset($_GET['cart'])){
     echo buildCart();
 }
 
-if (isset($_GET['login'])){
+else if (isset($_GET['login'])){
     echo buildLogin();
 }
 
-if (isset($_GET['shop'])){
+else if (isset($_GET['shop'])){
     echo buildShop();
 }
 
-
+else if (isset($_GET['board'])){
+    echo buildBoard();
+}
+else {
+    echo buildHome();
+}
 
 
 ?>

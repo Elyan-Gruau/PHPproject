@@ -1,0 +1,16 @@
+.mainBoardCont{
+    padding-top: 80px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.centerBoardCont{
+    border-radius: 5px;
+    width: 80%;
+    height: 90%;
+    margin: 0 10% 0 10%;
+    padding: 2%;
+    background-color: var(--ColCardBg);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+}

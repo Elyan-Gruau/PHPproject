@@ -7,8 +7,7 @@ $homepage = "/";
 $currentpage = $_SERVER['REQUEST_URI'];
 
 if($currentpage == $homepage or $currentpage == 'index.php') {
-
-    header('Location: '.'index.php?shop=True');
+    header('Location: '.'index.php?shop');
 }
 
 ?>
@@ -24,6 +23,9 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
         <link rel="stylesheet" href="css/productStyle.css">
         <link rel="stylesheet" href="css/loginStyle.css">
         <link rel="stylesheet" href="css/cartReviewStyle.css">
+        <link rel="stylesheet" href="css/userBoardStyle.css">
+        <link rel="stylesheet" href="css/homeStyle.css">
+        <link rel="preload" href="font/Castellar.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat">
@@ -32,15 +34,17 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
     </head>
     <body>
         <nav>
-            <a  href="index.php?shop=True" class="logoNavCont">
+            <a  href="index.php?home" class="logoNavCont">
                 <div >
                     <img id="logoText" src="img/logoText.png" alt="logoText">
                 </div>
             </a>
-            <a href="index.php?cart=True" ><img id="cart" src="img/cart.png" alt="Cart"> </a>
-            <a href="index.php?login=True" ><img id="connexion" src="img/profile.png" alt="profile"></a>
-            <a href="index.php?shop=True" class="categories">Chaussons</a>
+            <a href="index.php?cart" ><img id="cart" src="img/cart.png" alt="Cart"> </a>
+            <a href="index.php?login" ><img id="connexion" src="img/profile.png" alt="profile"></a>
+            <a href="index.php?shop" class="categories">Chaussons</a>
+            <a href="index.php?board" class="categories">DebugUserBoard</a>
         </nav>
+
     </body>
     <footer>
         <p>

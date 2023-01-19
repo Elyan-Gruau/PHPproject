@@ -1,0 +1,38 @@
+.mainHomeCont{
+    padding-top: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.centerHomeCont{
+    border-radius: 5px;
+    width: 100%;
+    height: 90%;
+
+    padding: 2%;
+    /*background-color: var(--ColTan);
+
+    background: rgb(25,25,30);
+     */
+    background: linear-gradient(16deg, rgba(25,25,30,1) 21%, rgba(148,104,81,1) 51%, rgba(25,25,30,1) 92%);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+}
+
+.mainHomeCont h1{
+    background: url(https://media.giphy.com/media/yiEQMMQFZiJ05unHI1/giphy.gif)  ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    width: 100%;
+    font-family: 'Castellar';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 120px;
+
+    -webkit-text-stroke: 3px var(--ColBlue);
+
+}
+
+.mainHomeCont .titleCont{
+    width: 100%;
+}

@@ -1,6 +1,9 @@
 <?php
 include('functions.php');
 //$con=mysql_connect("localhost","root","","ecom");
+if (isset($_GET['shop'])==null){
+    header('Location: '.'index.php?shop=True');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ include('functions.php');
     </head>
     <body>
         <nav>
-            <a  href="/" class="logoNavCont">
+            <a  href="index.php?shop=True" class="logoNavCont">
                 <div >
                     <img id="logoText" src="img/logoText.png" alt="logoText">
                 </div>
@@ -31,9 +34,6 @@ include('functions.php');
             <a href="index.php?login=True" ><img id="connexion" src="img/profile.png" alt="profile"></a>
             <a href="index.php?shop=True" class="categories">Chaussons</a>
         </nav>
-
-
-
     </body>
     <footer>
         <p>
@@ -66,6 +66,5 @@ include('functions.php');
                 <a href="https://www.flaticon.com/">Linkedin</a>
             </li>
         </ul>
-
     </footer>
 </html>

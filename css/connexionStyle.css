@@ -1,0 +1,93 @@
+.mainConnexionCont{
+    height: 100%;
+    width: 92%;
+    padding : 4%;
+}
+
+.centerConnexionCont{
+    width: 62%;
+    height: 92%;
+    margin: 0 20% 0 20%;
+    padding: 0 2% 0 2%;
+}
+
+.centerConnexionCont .left {
+    float: left;
+    width : 44%;
+
+}
+
+.centerConnexionCont .right {
+    float: right;
+    width : 44%;
+
+}
+.centerConnexionCont .right, .centerConnexionCont .left{
+    border-radius: 5px;
+    background-color: var(--ColCardBg);
+    padding: 2%;
+    height: 80%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+
+}
+
+
+
+.centerConnexionCont label{
+    width: 100%;
+    display: block;
+    padding-left: 4%;
+    color: var(--ColTan);
+
+}
+.centerConnexionCont button{
+    display: block;
+}
+
+.centerConnexionCont h3{
+    text-align: center;
+    color: var(--ColBlue);
+    text-shadow: 0px 0px 1px var(--ColTan),0px 0px 10px var(--ColCardBg);
+}
+
+.centerConnexionCont input{
+    padding: 17.5px 16px;
+    width: 92%;
+    line-height: 16px;
+    border-radius: 5px;
+    background-color: var(--ColBg1);
+    color: var(--ColBlue);
+    border : solid 1px  var(--ColTan);
+    margin : 2% 4% 2% 4%;
+}
+.centerConnexionCont input ::placeholder{
+    color: var(--ColTan);
+}
+
+.centerConnexionCont input:focus{
+    box-shadow: 4px 8px 16px 2px rgba(0,0,0,0.2);
+    border : solid 1px  var(--ColTan);
+}
+
+.centerConnexionCont button{
+    height: 60px;
+    width: 60%;
+    margin: 5% 20% 0 20%;
+    font-size: large;
+    padding: 0
+    1% 0 1%;
+    border-radius: 5px;
+    background-color: var(--ColBlue);
+    border: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+    color: var(--ColBg1);
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 0px white ;
+    transition: all ease-in-out 0.2s;
+}
+
+.centerConnexionCont button:hover{
+    transition: all ease-in 0.15s;
+    text-shadow: 0px 0px 5px var(--ColTan), 0px 0px 15px white ;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5) ;
+
+}

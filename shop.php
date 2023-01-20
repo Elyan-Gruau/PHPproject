@@ -19,7 +19,7 @@ require('includes/connect_client.php');
             <label class="selector">
                 <select name="price" id="price">
                     <option value="all">Tout</option>
-                    <option value="-20€">20€ et moins</option>
+                    <option value="-20">20€ et moins</option>
                     <option value="20-50">20€ à 50€</option>
                     <option value="50-100">50€ à 100€</option>
                     <option value="100-200">100€ à 200€</option>

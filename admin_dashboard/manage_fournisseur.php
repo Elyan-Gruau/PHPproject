@@ -21,8 +21,8 @@ if (isset($_POST['insert_fournisseur'])) {
 
 <form action="" method="post">
     <div>
-        <input type="text" placeholder="fournisseur" name="fournisseur">
-        <input type="email" placeholder="fournisseur@mail.com" name="mail_fournisseur">
+        <input type="text" placeholder="fournisseur" name="fournisseur" required>
+        <input type="email" placeholder="fournisseur@mail.com" name="mail_fournisseur" required>
     </div>
     <div>
         <input type="submit" name="insert_fournisseur" value="Ajouter fournisseur">

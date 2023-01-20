@@ -1,3 +1,8 @@
+<?php
+require('includes/connect_client.php');
+?>
+
+
 <div class="searcher">
     <h2>Filtre</h2>
     <h3>Prix
@@ -15,18 +20,15 @@
     <button>Rechercher</button>
 </div>
 <section  class="product">
-    <?php  buildProductCard("p1") ?>
-    <?php  buildProductCard("p2") ?>
-    <?php  buildProductCard("p3") ?>
-    <?php  buildProductCard("p4") ?>
-    <?php  buildProductCard("p5") ?>
-    <?php  buildProductCard("p6") ?>
-    <?php  buildProductCard("p7") ?>
-    <?php  buildProductCard("p8") ?>
-    <?php  buildProductCard("p9") ?>
-    <?php  buildProductCard("p10") ?>
-    <?php  buildProductCard("p11") ?>
-    <?php  buildProductCard("p12") ?>
-    <?php  buildProductCard("p15") ?>
+    <?php
+    $select_query = "select * from `produit`";
+
+    $result_select = mysqli_query($con, $select_query);
+
+    while($row = mysqli_fetch_array($result_select)) {
+        buildProductCard($row['id']);
+    }
+    ?>
+
 
 </section>

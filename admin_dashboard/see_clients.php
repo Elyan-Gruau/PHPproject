@@ -6,7 +6,7 @@ include('../includes/connect.php');
     <thead>
     <tr>
         <?php
-        $result = mysqli_query($con, "SELECT * FROM `Client` order by id");
+        $result = mysqli_query($con, "SELECT * FROM `client` order by id");
         $row = mysqli_fetch_assoc($result);
         foreach ($row as $key => $value) {
             echo "<th>$key</th>";

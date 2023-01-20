@@ -1,16 +1,27 @@
 <?php
+include('includes/connect_client.php');
+
+    $select_query = "select * from `produit` where `id` = '$id'";
+
+    $result_select = mysqli_query($con, $select_query);
+    $row = mysqli_fetch_array($result_select);
+
     $deliveryDays = 10;
     $bestseller = 'Bestseller!';
-    $price = 15;
-    $title = "TEST TITLE";
+    $price = $row['prixPublique'];
+    $title = $row['titre'];
     $sold = 3015;
+
+    $image = explode(', ', $row['image']);
+
 ?>
 
 <div class="card">
     <a href="index.php?product=<?=$id?>" >
-        <img src="img/Test1.jpg" alt="image">
+
+        <img src="img/product/<?php echo $image[0]; ?>" alt="image">
         <div class="cont1">
-            <p class="price"><?=15?>€</p>
+            <p class="price"><?=$price?>€</p>
             <p class="BestSeller"><?=$bestseller?></p>
 
         </div>

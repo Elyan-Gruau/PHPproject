@@ -17,7 +17,7 @@ require('includes/connect_client.php');
         <form action="" method="post">
             <h3>Prix</h3>
             <label class="selector">
-                <select name="Prix" id="prix">
+                <select name="price" id="price">
                     <option value="all">Tout</option>
                     <option value="-20€">20€ et moins</option>
                     <option value="20-50">20€ à 50€</option>
@@ -68,7 +68,7 @@ require('includes/connect_client.php');
         </label>
     </div>
     <div class="searcherPart">
-        <button type="sumbit" name="filter">Rechercher</button>
+        <button type="submit" name="filter">Rechercher</button>
     </div>
 
     </form>
@@ -95,11 +95,72 @@ require('includes/connect_client.php');
 
 
     function filter($id){
-        if (isset($_POST['filter'])){
-            if($_POST(''))
+        $filterPrice = false;
+        $filterBrand = false;
+        $filterColor = false;
+
+        echo "testing filter";
+
+        $select_query = "select  `p`.prixPublique, `p`.image, `p`.titre, `pv`.nb_vendu from `produit` p, `produit_vendu` pv where `p`.id = '$id' and `pv`.`id_produit` = '$id'";
+
+        $result_select = mysqli_query($con, $select_query);
+        echo "ici";
+        $row = mysqli_fetch_array($result_select);
+        $price = $row['prixPublique'];
+        $brand = $row['marque'];
+        $color = $row['color'];
+
+
+        if ($_POST['price'] == null){
+            echo "NULLLL";
+            $_POST['price'] = 'all';
         }
-        return true;
+
+        echo " sumbited price ".$_POST['price'];
+
+
+
+        switch($_POST['price'] ){
+            case "all":
+                $filterPrice = true;
+                echo "all";
+                break;
+            case "-20":
+                $filterPrice = $price < 20;
+                break;
+            case "20-50":
+                $filterPrice = $price >= 20 && $price <= 50;
+                break;
+            case "50-100":
+                $filterPrice = $price >= 50 && $price <= 100;
+                break;
+            case "100-200":
+                $filterPrice = $price >= 100 && $price <= 200;
+                break;
+            case "200+":
+                $filterPrice = $price >= 200;
+                break;
+        }
+        echo "affter switch";
+
+        if ($_POST['brand'] == "all") {
+            $filterBrand = true;
+        } else {
+            $filterBrand = $_POST['brand'] == $brand;
+        }
+
+        if ($_POST['color'] == "all") {
+            $filterColor = true;
+        } else {
+            $filterColor = $_POST['color'] == $color;
+        }
+
+
+        return $filterPrice && $filterBrand && $filterColor;
     }
+
+
+
     ?>
 
 

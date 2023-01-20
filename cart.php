@@ -2,6 +2,30 @@
 session_start();
 include('includes/connect_client.php');
 
+$id_client = $_SESSION['client'];
+
+$select_query = "select `ap`.* from `panier` pan, `achat_produit` ap where `ap`.id_panier=`pan`.id and `pan`.id_client='$id_client'";
+$result_select = mysqli_query($con, $select_query);
+
+
+$totalTTC=0;
+$totalItem=0;
+
+
+function buildAllCartItems($result){
+        //. id_panier id_produit, quantite
+
+
+        while($row = mysqli_fetch_array($result)){
+                    $qty = $row['quantite'];
+                    $itemId = $row['id_produit'];
+                    $itemPrice = $row['prix'];
+                    $totalItem++;
+                    $totalTCC+=$itemPrice;
+                    buildCartItem($itemId,$qty);
+              }
+}
+
 ?>
 
 <section class="devCartReview">
@@ -13,58 +37,24 @@ include('includes/connect_client.php');
                     <p id="cartPriceText">Prix</p>
                 </div>
                 <div class="cartItemsCont">
-                    <div class="cartProduct">
-                        <div class="productImage">
-                            <img src="img/Test1.jpg" alt="image">
-                        </div>
-
-                        <div class="productInformation">
-                            <div>
-                                <h4>The banana chaussons</h4>
-                                <p>Plus que </p>
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <p> exemplaires</p>
-                                <p>Taille: </p>
-                                <p>36-37</p>
-                            </div>
-
-                            <label >
-                                <select name="qty" id="productQtySelectorCart">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div class="priceCont">
-                            <p>19.99€</p>
-                            <a class="deleteFromCart">Supprimer</a>
-                        </div>
-
-                    </div>
+                    <?php
+                    buildAllCartItems($result_select);
+                    ?>
                 </div>
-
                 <div class="cartFooter">
-                    <p class="cartTotal">19.99€</p>
-                    <p>(2 articles):</p>
+                    <p class="cartTotal"><?=$totalTTC?>€</p>
+                    <p>(<?=$totalItem?> articles):</p>
                     <p>Sous-total </p>
-
-
                 </div>
             </div>
             <div class="right">
                 <p>Sous-total </p>
-                <p>(2 articles): </p>
-                <p class="cartTotal">19.99€</p>
-                <button class="cartCheckout">Passer la commande</button>
+                <p>(<?=$totalItem?> articles): </p>
+                <p class="cartTotal"><?=$totalTTC?>€</p>
+                <form name="cartValidation">
+                    <button class="cartCheckout">Passer la commande</button>
+                </form>
+
             </div>
         </div>
     </div>

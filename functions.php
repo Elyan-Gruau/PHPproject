@@ -33,8 +33,8 @@ function buildBoard(){
      include("board.php");
 }
 
-function buildCartItem($id){
-
+function buildCartItem($id,$qty){
+    include('cartItem.php');
 }
 
 function buildHome(){

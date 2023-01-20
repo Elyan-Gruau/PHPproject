@@ -1,53 +1,73 @@
 <?php
 session_start();
 require('includes/connect_client.php');
-if (isset($_POST['create_account'])) {
 
-    $first_name = $_POST['customerLogFirstName'];
-    $last_name = $_POST['customerLogLastName'];
-    $mail_client = $_POST['customerLogEmail'];
+if (isset($_SESSION['client'])){
+    include ('board.php');
+}
+else{
+    if (isset($_POST['create_account'])) {
 
-    $password = $_POST['customerLogPassword'];
-    $password = hash("sha256", $password);
+        $first_name = $_POST['customerLogFirstName'];
+        $last_name = $_POST['customerLogLastName'];
+        $mail_client = $_POST['customerLogEmail'];
 
-    $select_query = "select * from `client` where email='$mail_client'";
-    $result_select = mysqli_query($con, $select_query);
+        $password = $_POST['customerLogPassword'];
+        $password = hash("sha256", $password);
 
-    if (mysqli_num_rows($result_select) > 0) {
-        echo "Déjà inscrit";
-    } else {
-        $insert_query = "insert into `client` (nom, prenom, email, mdp) values ('$last_name', '$first_name', '$mail_client', '$password')";
-        $result = mysqli_query($con, $insert_query);
-        if ($result) {
-            echo "Compte créé !";
+        $select_query = "select * from `client` where email='$mail_client'";
+        $result_select = mysqli_query($con, $select_query);
 
-            $_SESSION['client'] = $res[0];
+        if (mysqli_num_rows($result_select) > 0) {
+            echo "Déjà inscrit";
+        } else {
+            $insert_query = "insert into `client` (nom, prenom, email, mdp) values ('$last_name', '$first_name', '$mail_client', '$password')";
+            $result = mysqli_query($con, $insert_query);
+            if ($result) {
 
-            header("Location: accountPage.php");
-            die();
+
+
+                $select_query = "select `id` from `client` where email='$mail_client'";
+                $result_select = mysqli_query($con, $select_query);
+                $row = mysqli_fetch_assoc($result_select);
+
+                $id_client = $row['id'];
+
+                $_SESSION['client'] = $id_client;
+
+                $insert_query = "insert into `panier` (id_client) values ('$id_client')";
+                $result = mysqli_query($con, $insert_query);
+
+                header("Location: board.php");
+                die();
+            }
         }
     }
-}
 
-if (isset($_POST['login'])) {
+    if (isset($_POST['login'])) {
 
-    $mail_client = $_POST['customerLogEmail'];
+        $mail_client = $_POST['customerLogEmail'];
 
-    $password = $_POST['customerLogPassword'];
-    $password = hash("sha256", $password);
+        $password = $_POST['customerLogPassword'];
+        $password = hash("sha256", $password);
 
-    $select_query = "select `mdp` from `client` where email='$mail_client'";
-    $result_select = mysqli_query($con, $select_query);
+        $select_query = "select `mdp`, `id` from `client` where email='$mail_client'";
+        $result_select = mysqli_query($con, $select_query);
 
-    if ($result_select == $password) {
-        include ('board.php');
-    } else {
-        echo 'Identifiants incorrects';
+        $row = mysqli_fetch_assoc($result_select);
+
+        if ($row['mdp'] == $password) {
+            $_SESSION['client'] = $row['id'];
+            header("Location: board.php");
+            die();
+
+        } else {
+            echo 'Identifiants incorrects';
+
+        }
+
 
     }
-
-
-}
 ?>
 
 
@@ -61,6 +81,9 @@ if (isset($_POST['login'])) {
                     <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com" required>
                     <label name="customerLogPassword">Mot de passe</label>
                     <input autocomplete="password" name="customerLogPassword" type="password" placeholder="Mot de passe" required>
+                    <?php
+
+                    ?>
                     <a href="forgotPass.php">Mot de passe oublié</a>
                     <button inputmode="submit" name="login">Connexion</button>
                 </form>
@@ -83,3 +106,7 @@ if (isset($_POST['login'])) {
         </div>
     </div>
 </section>
+
+<?php
+}
+?>

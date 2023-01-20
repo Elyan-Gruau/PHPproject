@@ -35,16 +35,19 @@ $qtt = 1;
 
 if (isset($_POST['add_to_cart'])){
 
+    $id_client = $_SESSION['client'];
 
+    $select_query = "select * from `panier` where `id_client` = '$id_client'";
+    $result_cart = mysqli_query($con, $select_query);
 
-    echo $qtt;
+    $row = mysqli_fetch_assoc($result_size);
+
+    $id_cart = $row['id'];
+
 }
-
- //todo à changer
-    function changeSize($newSize){
-        $size = $newSize;
-    }
 ?>
+
+
 <form method="post">
 <section class="devProductPage"  style="height: 900px; min-height: 900px">
     <div class="mainProductContainer">

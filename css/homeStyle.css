@@ -1,5 +1,5 @@
 :root{
-    --backgroundOffset: -600px;
+    --backgroundOffset: -15vw;
 }
 .mainHomeCont{
     padding-top: 60px;
@@ -67,7 +67,7 @@
     float: inherit;
 
     animation-name: titleFadeIn;
-    animation-duration: 2s;
+    animation-duration: 1s;
 
     filter: invert() hue-rotate(180deg);
 

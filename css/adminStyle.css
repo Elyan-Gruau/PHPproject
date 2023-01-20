@@ -1,16 +1,53 @@
 html{
-    background-color: rgb(210, 210, 230);
+    background-color: rgb(250, 250, 255);
     font-family: "Monsterrat", sans-serif;
     color:  rgb(75,75,85);
 }
-
-a{
-    background-color: #666666;
-    color: black;
+body{
+    margin:0;
 }
+
+
+
+
 
 table{
     border-radius: 5px;
     padding: 1%;
     border: 1px solid black;
+    width: 100% ;
+    row-gap: 0;
+    column-gap: 0;
+}
+
+th {
+    text-align: left;
+
+    background-color: rgba(210,210,215);
+}
+
+tr:nth-child(even){
+    background-color: rgba(240,240,245);
+}
+
+tr:nth-child(odd){
+    background-color: rgba(230,230,235);
+}
+
+tr:hover{
+    background-color: rgba(230,230,255);
+}
+
+
+.top a{
+    color: white;
+    background-color: rgb(36,45,56);
+    padding: 10px;
+    border: 1px solid grey;
+    margin-top: 10px;
+}
+
+.top a:last-child{
+    float: right;
+
 }

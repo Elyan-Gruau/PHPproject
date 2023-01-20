@@ -23,7 +23,7 @@
     float: left;
     background-color: var(--ColTan);
     width : 40%;
-    height: 90%;
+    height: content-box;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
 }
 
@@ -46,7 +46,9 @@
     border-radius: 5px;
 }
 .otherImagesCont img{
-    height: 10%;
+    object-fit: contain;
+    width: 25%;
+    height: 80px;
 
 }
 

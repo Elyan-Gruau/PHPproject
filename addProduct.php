@@ -1,4 +1,0 @@
-<section class="devAdminPage">
-
-
-</section>

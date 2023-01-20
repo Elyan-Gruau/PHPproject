@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('includes/connect_client.php');
 if (isset($_POST['create_account'])) {
 
@@ -34,11 +35,13 @@ if (isset($_POST['login'])) {
     $result_select = mysqli_query($con, $select_query);
 
     if ($result_select == $password) {
-        echo 'Bienvenue';
+        include ('board.php');
     } else {
         echo 'Identifiants incorrects';
 
     }
+
+
 }
 ?>
 
@@ -53,7 +56,7 @@ if (isset($_POST['login'])) {
                     <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com" required>
                     <label name="customerLogPassword">Mot de passe</label>
                     <input autocomplete="password" name="customerLogPassword" type="password" placeholder="Mot de passe" required>
-
+                    <a href="forgotPass.php">Mot de passe oublié</a>
                     <button inputmode="submit" name="login">Connexion</button>
                 </form>
             </div>

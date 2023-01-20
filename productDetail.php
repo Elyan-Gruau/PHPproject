@@ -1,14 +1,15 @@
 <?php
-
+session_start();
 include('includes/connect_client.php');
 
-$select_query = "select * from `produit` where `id` = '$id'";
+$select_query = "select `p`.*, `m`.nom marque from `produit` p, `marque` m where `p`.id = '$id' and `m`.id = `p`.id_marque";
 $result_select = mysqli_query($con, $select_query);
 $row = mysqli_fetch_array($result_select);
 
 
 $price = $row['prixPublique'];
 $title = $row['titre'];
+$brand = $row['marque'];
 $desc = $row['descriptif'];
 $image = explode(', ', $row['image']);
 $image_nb = $_GET['image'] ?? 0;
@@ -28,14 +29,14 @@ $result_stock = mysqli_query($con, $select_query);
 
 
 $deliveryDays = 10;
-$bestseller = 'Bestseller!';
-
-$sold = 3015;
 
 $qtt = 1;
 
 
 if (isset($_POST['add_to_cart'])){
+
+
+
     echo $qtt;
 }
 
@@ -69,6 +70,9 @@ if (isset($_POST['add_to_cart'])){
             <div class="right">
                 <div class="productTitle">
                     <h2><?php echo $title?></h2>
+                </div>
+                <div class="currentSize">
+                    <p><?php echo $brand?></p>
                 </div>
                 <div class="currentSize">
                     <p>Taille actuelle</p>
@@ -105,7 +109,7 @@ if (isset($_POST['add_to_cart'])){
                                 ?>
                             </select>
                         </label>
-                        <p> Plus que&nbsp;</p><p><?=$qstock?></p><p>&nbsp;paires disponibles.</p>
+                        <p> Plus que&nbsp;</p><p><?=$qstock ?? 0?></p><p>&nbsp;paires disponibles.</p>
                     </div>
                     <div class="addToCartCont">
                         <button inputmode="submit" name="add_to_cart">Ajouter au panier</button>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <section  style="height: 900px; min-height: 900px">
     <div class="mainBoardCont">
         <div class="centerBoardCont">

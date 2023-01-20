@@ -3,16 +3,16 @@
         <link rel="stylesheet" href="../css/adminStyle.css"
         <link rel="stylesheet" href="../css/general.css"
     </head>
-    <form action="" method="post">
+    <form action="" method="post" class="top">
         <div>
-            <button><a href="index.php?manage_brand">Nouvelle marque</a></button>
-            <button><a href="index.php?manage_product">Produits</a></button>
-            <button><a href="index.php?manage_stock">Stocks</a></button>
-            <button><a href="index.php?manage_fournisseur">Nouveau fournisseur</a></button>
-            <button><a href="index.php?see_orders">Voir commandes</a></button>
-            <button><a href="index.php?see_clients">Voir clients</a></button>
-            <button><a href="index.php?see_sales">Voir ventes</a></button>
-            <button> <a href="../index.php"> Retour </a></button>
+            <a href="index.php?manage_brand">Nouvelle marque</a>
+            <a href="index.php?manage_product">Produits</a>
+            <a href="index.php?manage_stock">Stocks</a>
+            <a href="index.php?manage_fournisseur">Nouveau fournisseur</a>
+            <a href="index.php?see_orders">Voir commandes</a>
+            <a href="index.php?see_clients">Voir clients</a>
+            <a href="index.php?see_sales">Voir ventes</a>
+             <a href="../index.php?board"> Retour </a>
         </div>
     </form>
     <div>

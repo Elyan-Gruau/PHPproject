@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('includes/connect_client.php');
 
 ?>

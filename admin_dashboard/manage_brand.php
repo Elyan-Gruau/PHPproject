@@ -21,7 +21,7 @@ if (isset($_POST['insert_brand'])){
 
 <form action="" method="post">
     <div>
-        <input type="text" placeholder="marque" name="brand">
+        <input type="text" placeholder="marque" name="brand" required>
     </div>
     <div>
         <input type="submit" name="insert_brand" value="Ajouter marque">

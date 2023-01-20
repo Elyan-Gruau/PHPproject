@@ -29,5 +29,8 @@
     if(isset($_GET['see_clients'])){
         include('see_clients.php');
     }
+if(isset($_GET['manage_product_size'])){
+    include('manage_product_size.php');
+}
     ?>
     </div>

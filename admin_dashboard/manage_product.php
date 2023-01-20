@@ -12,16 +12,24 @@ if (isset($_POST['insert_product'])){
     $product_fournisseur_nb = $_POST['fournisseur_nb'];
 
 
-
-    $insert_query="insert into `produit` (`id_marque`, `couleur`, `prixPublique`, `prixAchat`, `image`, `titre`, `descriptif`, `id_fournisseur`) values 
-            ('$product_brand_nb', '$product_color', '$product_selling_price', '$product_buying_price', '$product_images', '$product_title', '$product_desc', '$product_fournisseur_nb')";
-    $result = mysqli_query($con, $insert_query);
-    if ($result){
-        echo "Produit ajouté !";
+    $select_query = "select * from `produit` where titre='$product_title'";
+    $result_select = mysqli_query($con, $select_query);
+    if(mysqli_num_rows($result_select)>0){
+        echo "Il y est déjà bouffon";
     }
+    else{
+        $insert_query="insert into `produit` (`id_marque`, `couleur`, `prixPublique`, `prixAchat`, `image`, `titre`, `descriptif`, `id_fournisseur`) values 
+            ('$product_brand_nb', '$product_color', '$product_selling_price', '$product_buying_price', '$product_images', '$product_title', '$product_desc', '$product_fournisseur_nb')";
+        $result = mysqli_query($con, $insert_query);
+        if ($result){
+            echo "Produit ajouté !";
+        }
+    }
+
 
 }
 ?>
+<div><button><a href="index.php?manage_product_size">Taille</a></button></div>
 
 <form action="" method="post">
     <div>

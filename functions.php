@@ -9,7 +9,7 @@ function buildCard(){
 
 }
 
-function buildProductDetail($id,$price){
+function buildProductDetail($id){
     return include("productDetail.php");
 }
 
@@ -46,8 +46,8 @@ function buildHome(){
 
 $oldP = "";
 if (isset($_GET['product'])!=$oldP){
-    $oldP=isset($_GET['product']);
-    echo buildProductDetail(isset($_GET['product']),229.99);
+    $oldP=$_GET['product'];
+    echo buildProductDetail($_GET['product']);
 }
 
 else if (isset($_GET['cart'])){

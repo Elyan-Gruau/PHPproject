@@ -51,7 +51,7 @@ require('includes/connect_client.php');
     <div class="searcherPart">
         <h3>Couleur</h3>
         <label class="selector">
-            <select id="coulor" name="coulor">
+            <select id="color" name="color">
                 <option value="all">Tout</option>
                 <?php
                 $select_query = "SELECT couleur FROM `produit` GROUP by couleur;";
@@ -95,38 +95,30 @@ require('includes/connect_client.php');
 
 
     function filter($id){
+        include ('includes/connect_client.php');
         $filterPrice = false;
         $filterBrand = false;
         $filterColor = false;
 
-        echo "testing filter";
 
-        $select_query = "select  `p`.prixPublique, `p`.image, `p`.titre, `pv`.nb_vendu from `produit` p, `produit_vendu` pv where `p`.id = '$id' and `pv`.`id_produit` = '$id'";
+
+        $select_query ="select  `p`.prixPublique, `p`.couleur, `m`.nom  from `produit` p, `marque` m where `p`.id = '$id' and `m`.id = `p`.id_marque";
 
         $result_select = mysqli_query($con, $select_query);
-        echo "ici";
+
         $row = mysqli_fetch_array($result_select);
         $price = $row['prixPublique'];
         $brand = $row['marque'];
-        $color = $row['color'];
-
-
-        if ($_POST['price'] == null){
-            echo "NULLLL";
-            $_POST['price'] = 'all';
-        }
-
-        echo " sumbited price ".$_POST['price'];
-
+        $color = $row['couleur'];
 
 
         switch($_POST['price'] ){
             case "all":
                 $filterPrice = true;
-                echo "all";
+
                 break;
             case "-20":
-                $filterPrice = $price < 20;
+                $filterPrice = $price <= 20;
                 break;
             case "20-50":
                 $filterPrice = $price >= 20 && $price <= 50;
@@ -141,7 +133,7 @@ require('includes/connect_client.php');
                 $filterPrice = $price >= 200;
                 break;
         }
-        echo "affter switch";
+
 
         if ($_POST['brand'] == "all") {
             $filterBrand = true;
@@ -154,7 +146,7 @@ require('includes/connect_client.php');
         } else {
             $filterColor = $_POST['color'] == $color;
         }
-
+        //echo "<br> {$id} {$filterColor} {$filterBrand} {$filterPrice}</br>";
 
         return $filterPrice && $filterBrand && $filterColor;
     }

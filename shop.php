@@ -14,7 +14,7 @@ require('includes/connect_client.php');
 
 <div class="searcher">
     <div class="searcherPart">
-        <form>
+        <form action="" method="post">
             <h3>Prix</h3>
             <label class="selector">
                 <select name="Prix" id="prix">
@@ -30,7 +30,7 @@ require('includes/connect_client.php');
     <div class="searcherPart">
         <h3>Marque</h3>
         <label class="selector">
-            <select id="brand_nb" name="brand_nb">
+            <select id="brand" name="brand">
                 <option value="all">Tout</option>
                 <?php
                 $select_query = "select * from `marque`";
@@ -46,12 +46,12 @@ require('includes/connect_client.php');
             </select>
         </label>
     </div>
-        </form>
+
 
     <div class="searcherPart">
         <h3>Couleur</h3>
         <label class="selector">
-            <select id="brand_nb" name="brand_nb">
+            <select id="coulor" name="coulor">
                 <option value="all">Tout</option>
                 <?php
                 $select_query = "SELECT couleur FROM `produit` GROUP by couleur;";
@@ -68,19 +68,37 @@ require('includes/connect_client.php');
         </label>
     </div>
     <div class="searcherPart">
-        <button>Rechercher</button>
+        <button type="sumbit" name="filter">Rechercher</button>
     </div>
 
-
+    </form>
 </div>
 <section  class="product">
     <?php
     $select_query = "select * from `produit`";
 
     $result_select = mysqli_query($con, $select_query);
+    if (isset($_POST['filter'])){
+        while($row = mysqli_fetch_array($result_select)) {
+            if (filter($row['id'])){
+                buildProductCard($row['id']);
+            }
 
-    while($row = mysqli_fetch_array($result_select)) {
-        buildProductCard($row['id']);
+
+        }
+        }
+    else{
+        while($row = mysqli_fetch_array($result_select)) {
+            buildProductCard($row['id']);;
+        }
+    }
+
+
+    function filter($id){
+        if (isset($_POST['filter'])){
+            if($_POST(''))
+        }
+        return true;
     }
     ?>
 

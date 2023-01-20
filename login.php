@@ -20,6 +20,11 @@ if (isset($_POST['create_account'])) {
         $result = mysqli_query($con, $insert_query);
         if ($result) {
             echo "Compte créé !";
+
+            $_SESSION['client'] = $res[0];
+
+            header("Location: accountPage.php");
+            die();
         }
     }
 }

@@ -19,9 +19,19 @@ if (isset($_POST['insert_product'])){
     }
     else{
         $insert_query="insert into `produit` (`id_marque`, `couleur`, `prixPublique`, `prixAchat`, `image`, `titre`, `descriptif`, `id_fournisseur`) values 
-            ('$product_brand_nb', '$product_color', '$product_selling_price', '$product_buying_price', '$product_images', '$product_title', '$product_desc', '$product_fournisseur_nb')";
+        ('$product_brand_nb', '$product_color', '$product_selling_price', '$product_buying_price', '$product_images', '$product_title', '$product_desc', '$product_fournisseur_nb')";
+        echo "ici";
+        echo $insert_query;
         $result = mysqli_query($con, $insert_query);
+        echo "la";
+        $result_select_sale = mysqli_query($con, $select_query);
+        $id = mysqli_fetch_assoc($result_select_sale)['id'];
+        echo $id;
+        $insert_query_sale="insert into `produit_vendu` (`id_produit`, `nb_vendu`) values ('$id', 0)";
+        $result_sale = mysqli_query($con, $insert_query_sale);
+
         if ($result){
+
             echo "Produit ajouté !";
         }
     }

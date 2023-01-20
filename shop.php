@@ -4,8 +4,8 @@ require('includes/connect_client.php');
 
 
 <div class="searcher">
-    <h2>Filtre</h2>
-    <h3>Prix
+    <div class="searcherPart">
+        <h3>Prix</h3>
         <label class="selector">
             <select name="Prix" id="prix">
                 <option value="all">Tout</option>
@@ -16,8 +16,18 @@ require('includes/connect_client.php');
                 <option value="200+">200€ et plus</option>
             </select>
         </label>
-    </h3>
-    <button>Rechercher</button>
+    </div>
+    <div class="searcherPart">
+        <h3>Marque</h3>
+    </div>
+    <div class="searcherPart">
+        <h3>Couleur</h3>
+    </div>
+    <div class="searcherPart">
+        <button>Rechercher</button>
+    </div>
+
+
 </div>
 <section  class="product">
     <?php

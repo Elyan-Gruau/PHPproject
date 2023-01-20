@@ -25,7 +25,7 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
         <link rel="stylesheet" href="css/cartReviewStyle.css">
         <link rel="stylesheet" href="css/userBoardStyle.css">
         <link rel="stylesheet" href="css/homeStyle.css">
-        <link rel="preload"  href="font/Castellar.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="preload"  href="font/Castellar.ttf" as="font" type="font/ttf" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat">
@@ -44,38 +44,41 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
             <a href="index.php?shop" class="categories">Chaussons</a>
             <a href="index.php?board" class="categories">DebugUserBoard</a>
         </nav>
-
     </body>
     <footer>
-        <p>
-            BROCOLI SoftGames ©
-            GRUAU Elyan - MAHÉ Jules
-        </p>
-        <ul>
-            <li>
-                <a>Condition d'utilisations</a>
-            </li>
-            <li>
-                <a>Our Team</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/">Icons used</a>
-            </li>
-        </ul>
-        <p> Contact</p>
-        <ul>
-            <li>
-                <a href="https://www.flaticon.com/">mail</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/">0612458798</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/">Instagram</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/">Linkedin</a>
-            </li>
-        </ul>
+
+        <div class="footerCont">
+            <p>
+                BROCOLI SoftGames ©
+                GRUAU Elyan - MAHÉ Jules
+            </p>
+            <ul>
+                <li>
+                    <a>Condition d'utilisations</a>
+                </li>
+                <li>
+                    <a>Our Team</a>
+                </li>
+                <li>
+                    <a href="https://www.flaticon.com/">Icons used</a>
+                </li>
+            </ul>
+            <p> Contact</p>
+            <ul>
+                <li>
+                    <a href="https://www.flaticon.com/">mail</a>
+                </li>
+                <li>
+                    <a href="https://www.flaticon.com/">0612458798</a>
+                </li>
+                <li>
+                    <a href="https://www.flaticon.com/">Instagram</a>
+                </li>
+                <li>
+                    <a href="https://www.flaticon.com/">Linkedin</a>
+                </li>
+            </ul>
+        </div>
+
     </footer>
 </html>

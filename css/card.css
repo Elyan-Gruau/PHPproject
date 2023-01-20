@@ -63,3 +63,8 @@
     text-decoration: none;
     color: var(--ColDark0);
 }
+
+.product {
+    width: 90% ;
+    padding: 0 5% 0 5%;
+}

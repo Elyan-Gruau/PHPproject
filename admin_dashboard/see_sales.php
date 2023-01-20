@@ -6,7 +6,7 @@ include('../includes/connect.php');
     <thead>
     <tr>
         <?php
-        $result = mysqli_query($con, "SELECT * FROM `facturation` order by id ASC");
+        $result = mysqli_query($con, "SELECT `pv`.id_produit, `p`.titre, `pv`.nb_vendu FROM `produit_vendu` pv, `produit` p where `pv`.id_produit = `p`.id order by id_produit");
         $row = mysqli_fetch_assoc($result);
         foreach ($row as $key => $value) {
             echo "<th>$key</th>";
@@ -27,5 +27,3 @@ include('../includes/connect.php');
     ?>
     </tbody>
 </table>
-
-

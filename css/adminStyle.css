@@ -1,0 +1,16 @@
+html{
+    background-color: rgb(210, 210, 230);
+    font-family: "Monsterrat", sans-serif;
+    color:  rgb(75,75,85);
+}
+
+a{
+    background-color: #666666;
+    color: black;
+}
+
+table{
+    border-radius: 5px;
+    padding: 1%;
+    border: 1px solid black;
+}

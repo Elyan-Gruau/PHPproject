@@ -1,4 +1,4 @@
-<section class="devProductPage"  style="height: 900px; min-height: 900px">
+<section  style="height: 900px; min-height: 900px">
     <div class="mainBoardCont">
         <div class="centerBoardCont">
             <div class="left">
@@ -6,7 +6,7 @@
 
             </div>
             <div class="right">
-
+                <a href="admin_dashboard/index.php">page admin</a>
             <div>
         </div>
     </div>

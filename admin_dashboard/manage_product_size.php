@@ -13,7 +13,17 @@ if (isset($_POST['insert_product_size'])){
     else{
         $insert_query="insert into `produit_taille` (`id_produit`, `taille`) values ('$product_id', '$product_size')";
         $result = mysqli_query($con, $insert_query);
+
+        $result_id = mysqli_query($con, $select_query);
+        $product_size_id = mysqli_fetch_assoc($result_id)['id'];
+
+        $insert_query="insert into `stock_taille` (`id_produit_taille`, `stock`) values ('$product_size_id', 0)";
+        $result_stock = mysqli_query($con, $insert_query);
+
         if ($result){
+
+
+
             echo "Taille ajoutée !";
         }
     }

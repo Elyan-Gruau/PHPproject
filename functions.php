@@ -10,27 +10,27 @@ function buildCard(){
 }
 
 function buildProductDetail($id){
-    return include("productDetail.php");
+     include("productDetail.php");
 }
 
 function buildProductCard($id){
     //todo rajouter l'id du produit, la fonction genère tout à partir de ça.
-    return include("productCard.php");
+     include("productCard.php");
 }
 
 function buildCart(){
-    return include("cart.php");
+     include("cart.php");
 }
 
 function buildLogin(){
-    return include("login.php");
+     include("login.php");
 }
 
 function buildShop(){
-    return include("shop.php");
+     include("shop.php");
 }
 function buildBoard(){
-    return include("board.php");
+     include("board.php");
 }
 
 function getAllInfoFromProduct($id){
@@ -41,33 +41,33 @@ function getAllInfoFromProduct($id){
 }
 
 function buildHome(){
-    return include("home.php");
+     include("home.php");
 }
 
 $oldP = "";
 if (isset($_GET['product'])!=$oldP){
     $oldP=$_GET['product'];
-    echo buildProductDetail($_GET['product']);
+    buildProductDetail($_GET['product']);
 }
 
 else if (isset($_GET['cart'])){
-    echo buildCart();
+    buildCart();
 }
 
 else if (isset($_GET['login'])){
-    echo buildLogin();
+    buildLogin();
 }
 
 else if (isset($_GET['shop'])){
-    echo buildShop();
+     buildShop();
 }
 
 else if (isset($_GET['board'])){
-    echo buildBoard();
+    buildBoard();
 }
 else {
-    echo buildHome();
-    echo buildShop();
+    buildHome();
+    buildShop();
 }
 
 

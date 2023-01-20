@@ -1,3 +1,9 @@
+<?php
+
+include('includes/connect_client.php');
+
+?>
+
 <section class="devCartReview">
     <div class="mainCartReviewCont">
         <div class="centerCartReviewCont">

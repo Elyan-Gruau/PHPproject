@@ -1,7 +1,7 @@
 <?php
 include('includes/connect_client.php');
 
-    $select_query = "select * from `produit` where `id` = '$id'";
+    $select_query = "select * from `produit`, `produit_vendu` pv where id = '$id' and `pv`.`id_produit`";
 
     $result_select = mysqli_query($con, $select_query);
     $row = mysqli_fetch_array($result_select);
@@ -10,7 +10,7 @@ include('includes/connect_client.php');
     $bestseller = 'Bestseller!';
     $price = $row['prixPublique'];
     $title = $row['titre'];
-    $sold = 3015;
+    $sold = $row['`pv`.id_produit'];
 
     $image = explode(', ', $row['image']);
 
@@ -29,7 +29,6 @@ include('includes/connect_client.php');
             <p class="title"><?=$title?></p>
             <p class="sold"><?=$sold?> vendus</p>
             <p class="shipping">Expédition sous <?=  $deliveryDays?> jours </p>
-            <p> DEBUG: <?= $id ?></p>
         </div>
      </a>
 </div>

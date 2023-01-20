@@ -71,9 +71,8 @@
 
     filter: invert() hue-rotate(180deg);
 
-
-
-
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 }
 
 .mainHomeCont .titleCont{
@@ -111,45 +110,42 @@
     font-weight : normal;
     font-style: normal;
 
-
 }
 
 @keyframes titleFadeIn {
     0%   {
-        font-size: 12px;
-        filter: opacity(100);
+
+        filter:invert() hue-rotate(180deg) blur(50px);
     }
     10%  {
-        backdrop-filter: opacity(100);
+        filter:invert() hue-rotate(180deg) blur(45px);
     }
     20%  {
-        backdrop-filter: opacity(100);
+        filter:invert() hue-rotate(180deg) blur(40px);
     }
     30%  {
-        backdrop-filter: opacity(100);;
+        filter:invert() hue-rotate(180deg) blur(35px);
     }
     40%  {
-        backdrop-filter: opacity(100);
+        filter:invert() hue-rotate(180deg) blur(30px);
     }
     50%  {
-        backdrop-filter: opacity(100);
+        filter:invert() hue-rotate(180deg) blur(25px);
     }
-    10%  {
-        backdrop-filter: opacity(100);
+    60%  {
+        filter:invert() hue-rotate(180deg) blur(20px);
     }
-    10%  {
-        backdrop-filter: opacity(100);
+    70%  {
+        filter:invert() hue-rotate(180deg) blur(15px);
     }
-    10%  {
-        backdrop-filter: opacity(100);
+    80%  {
+        filter:invert() hue-rotate(180deg) blur(10px);
     }
-    10%  {
-
-        backdrop-filter: opacity(100);
+    90%  {
+        filter:invert() hue-rotate(180deg) blur(5px);
     }
     100% {
-
-        -webkit-text-fill-color: transparent;
+        filter:invert() hue-rotate(180deg) blur(0px);
 
     }
 }

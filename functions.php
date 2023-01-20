@@ -33,11 +33,8 @@ function buildBoard(){
      include("board.php");
 }
 
-function getAllInfoFromProduct($id){
-    //todo faire une map qui à toute les info du produit
-    //Prix
-    //Array de string des des tailles dispobiles
-    //String livraison
+function buildCartItem($id){
+
 }
 
 function buildHome(){

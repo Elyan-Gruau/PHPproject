@@ -76,17 +76,20 @@ require('includes/connect_client.php');
 <section  class="product">
     <?php
     $select_query = "select * from `produit`";
-
+    $empty = true;
     $result_select = mysqli_query($con, $select_query);
     if (isset($_POST['filter'])){
         while($row = mysqli_fetch_array($result_select)) {
             if (filter($row['id'])){
                 buildProductCard($row['id']);
+                $empty = false;
             }
 
-
         }
+        if ($empty) {
+            echo '<p> Aucun produit trouvé.</p>';
         }
+          }
     else{
         while($row = mysqli_fetch_array($result_select)) {
             buildProductCard($row['id']);;

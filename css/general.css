@@ -35,7 +35,7 @@ footer{
     margin-top: 60px;
     color: rgb(255,255,255);
     background-color: var(--ColBlack);
-    height: 120px;
+    min-height: 120px;
     padding: 2% 2% 5% 5%;
 }
 
@@ -64,10 +64,10 @@ footer{
 
 
 
-.seatcher button{
-    height: 60px;
+.searcher button{
+    height: 40px;
     width: 100%;
-    font-size: xx-large;
+    font-size: 21px;
     padding: 0
     1% 0 1%;
     border-radius: 5px;

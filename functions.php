@@ -33,6 +33,10 @@ function buildBoard(){
      include("board.php");
 }
 
+function buildOrders(){
+    include('see_orders_client.php');
+}
+
 function buildCartItem($id,$qty){
     include('cartItem.php');
 }
@@ -62,7 +66,18 @@ else if (isset($_GET['shop'])){
 else if (isset($_GET['board'])){
     buildBoard();
 }
-else {
+
+else if (isset($_GET['orders'])){
+    buildOrders();
+}
+
+else if (isset($_GET['disconnect'])) {
+    session_destroy();
+
+    $URL = "index.php";
+    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+
+} else {
     buildHome();
     buildShop();
 }

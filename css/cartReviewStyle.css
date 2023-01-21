@@ -1,17 +1,20 @@
 .mainCartReviewCont {
     width : 100%;
-    height : 100%;
+    min-height : 100%;
+    height: border-box;
     padding-top : 80px;
+    margin-bottom: 60px;
 }
 
 .centerCartReviewCont {
     background-color: var(--ColCardBg);
     border-radius: 5px;
     width: 80%;
-    height: 90%;
+    height: border-box;
     margin: 0 0% 0 10%;
     padding: 2%;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
+    display: inline-table;
 }
 
 .centerCartReviewCont .left{
@@ -23,7 +26,7 @@
     float: right;
     background-color: var(--ColTan);
     width: 20%;
-    height: 40%;
+    minheight: 400px;
     border-radius: 5px;
     padding: 2%;
 }
@@ -68,9 +71,10 @@
 
 .cartProduct {
     width: 96%;
-    min-height: 250px;
+    min-height: 230px;
     height: fit-content;
     padding: 2%;
+    display: block;
 }
 
 .cartProduct > * {

@@ -6,6 +6,14 @@ if (isset($_SESSION['client'])){
     include ('board.php');
 }
 else{
+
+    if (isset($_GET['forgotPass'])){
+        include ('forgotPass.php');
+    }
+    else{
+
+
+
     if (isset($_POST['create_account'])) {
 
         $first_name = $_POST['customerLogFirstName'];
@@ -38,13 +46,13 @@ else{
                 $insert_query = "insert into `panier` (id_client) values ('$id_client')";
                 $result = mysqli_query($con, $insert_query);
 
-                header("Location: board.php");
+                header("Location: index.php?login");
                 die();
             }
         }
     }
 
-    if (isset($_POST['login'])) {
+    else if (isset($_POST['login'])) {
 
         $mail_client = $_POST['customerLogEmail'];
 
@@ -58,16 +66,15 @@ else{
 
         if ($row['mdp'] == $password) {
             $_SESSION['client'] = $row['id'];
-            header("Location: board.php");
+            header("Location: index.php?login");
             die();
 
         } else {
             echo 'Identifiants incorrects';
 
         }
-
-
     }
+
 ?>
 
 
@@ -81,10 +88,7 @@ else{
                     <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com" required>
                     <label name="customerLogPassword">Mot de passe</label>
                     <input autocomplete="password" name="customerLogPassword" type="password" placeholder="Mot de passe" required>
-                    <?php
-
-                    ?>
-                    <a href="forgotPass.php">Mot de passe oublié</a>
+                    <a href="?login&forgotPass">Mot de passe oublié</a>
                     <button inputmode="submit" name="login">Connexion</button>
                 </form>
             </div>
@@ -108,5 +112,6 @@ else{
 </section>
 
 <?php
+}
 }
 ?>

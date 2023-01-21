@@ -32,19 +32,43 @@ $deliveryDays = 10;
 
 $qtt = 1;
 
-
 if (isset($_POST['add_to_cart'])){
+    if (isset($_SESSION['client'])){
 
-    $id_client = $_SESSION['client'];
+        $id_client = $_SESSION['client'];
 
-    $select_query = "select * from `panier` where `id_client` = '$id_client'";
-    $result_cart = mysqli_query($con, $select_query);
+        $select_query = "select * from `panier` where `id_client` = '$id_client'";
+        $result_cart = mysqli_query($con, $select_query);
+        $row = mysqli_fetch_assoc($result_cart);
 
-    $row = mysqli_fetch_assoc($result_size);
+        $id_cart = $row['id'];
 
-    $id_cart = $row['id'];
+        $select_query = "select `pt`.id, `p`.prixPublique from `produit_taille` pt, `produit` p where id_produit='$id' and taille='$size'";
+        $result_product = mysqli_query($con, $select_query);
+        $row = mysqli_fetch_assoc($result_product);
 
+        $id_produit_taille = $row['id'];
+
+
+        $select_query = "select * from `achat_produit` where `id_produit` = '$id_produit_taille' and `id_panier` = '$id_cart'";
+        $result_item = mysqli_query($con, $select_query);
+        $quantite = $_POST['qty'];
+
+        if (mysqli_num_rows($result_item) > 0) {
+            $update_query = "UPDATE `achat_produit` SET `quantite` = '$quantite' WHERE `achat_produit`.`id_panier` = '$id_cart' AND `achat_produit`.`id_produit` = '$id_produit_taille'";
+            $result_insert = mysqli_query($con, $update_query);
+        }
+        else {
+            $insert_query = "insert into `achat_produit` (id_panier, id_produit, quantite, prix) values ('$id_cart', '$id_produit_taille', '$quantite', '$price')";
+            $result_insert = mysqli_query($con, $insert_query);
+        }
+    }
+    else{
+        header("Location: index.php?login");
+        die();
+    }
 }
+
 ?>
 
 

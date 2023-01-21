@@ -1,12 +1,16 @@
 <?php
-include('../includes/connect.php');
+include('includes/connect_client.php');
+
+session_start();
+
+$id_client = $_SESSION['client'];
 ?>
 
 <table>
     <thead>
     <tr>
         <?php
-        $result = mysqli_query($con, "SELECT * FROM `facturation` order by id DESC");
+        $result = mysqli_query($con, "SELECT * FROM `facturation` where `id_client` = '$id_client' order by id DESC");
         $row = mysqli_fetch_assoc($result);
         foreach ($row as $key => $value) {
             echo "<th>$key</th>";

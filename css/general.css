@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Castellar2";
+    src: url('font/Castellar.eot'); /* IE9 Compat Modes */
+    src: url('font/Castellar.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('font/Castellar.woff2') format('woff2'), /* Super Modern Browsers */
+    url('font/Castellar.woff') format('woff'), /* Pretty Modern Browsers */
+    url('font/Castellar.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('font/Castellar.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root{
     --Col1 : rgb(240,210,146);
     --Col2 : rgb(92,49,24);
@@ -15,6 +28,7 @@
 
 
 
+
 /*
 TODO: Rendre les cartes cliquable pour qu'elles génèrent leur page.
  */
@@ -25,23 +39,78 @@ body{
 
      */
     font-family: "Monsterrat", sans-serif;
+    webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html{
     background-color : var(--ColBlack);
 }
 
+
+
+/*******************/
+/*      FOOTER     */
+/*******************/
+
 footer{
     margin-top: 60px;
     color: rgb(255,255,255);
     background-color: var(--ColBlack);
     min-height: 120px;
-    padding: 2% 2% 5% 5%;
+    padding: 2% 5% 2% 5%;
 }
 
 .footerCont{
     display: inline-block;
+    width: 80%;
+    padding: 0 10% 0 10%;
 }
+
+.footerPart{
+    display: inline-block;
+    border-right: 1px solid var(--ColBg1);
+
+    padding: 2%;
+    width: 36%;
+
+}
+
+.footerPart a{
+    text-decoration: none;
+    color: var(--ColBg1);
+}
+
+.footerTitle{
+    width: 80%;
+    display: table;
+    padding-bottom: 2%;
+}
+
+.footerTitle h4{
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+    width: 100%;
+}
+
+.footerPart p{
+    text-align: center;
+}
+
+footer li{
+    list-style: none;
+    text-align: center;
+}
+
+footer ul{
+    padding: 0;
+}
+
+
+/*******************/
+/*     SEARCHER    */
+/*******************/
 
 .searcher{
     background-color: var(--ColCardBg);
@@ -86,6 +155,9 @@ footer{
 
 }
 
+/*******************/
+/*      SELECTOR   */
+/*******************/
 
 .selector select{
     width: 80%;

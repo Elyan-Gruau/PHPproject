@@ -12,7 +12,7 @@
             <a href="index.php?see_orders">Voir commandes</a>
             <a href="index.php?see_clients">Voir clients</a>
             <a href="index.php?see_sales">Voir ventes</a>
-             <a href="../index.php?board"> Retour </a>
+            <a href="../index.php?login"> Retour </a>
         </div>
     </form>
     <div>

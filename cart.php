@@ -2,17 +2,28 @@
 session_start();
 include('includes/connect_client.php');
 
+if (!isset($_SESSION['client'])){
+    header("Location: index.php?login");
+    die();
+}
+else{
+
+
 $id_client = $_SESSION['client'];
 
 $select_query = "select `ap`.* from `panier` pan, `achat_produit` ap where `ap`.id_panier=`pan`.id and `pan`.id_client='$id_client'";
 $result_select = mysqli_query($con, $select_query);
+$row = mysqli_fetch_array($result_select);
 
+$result_select = mysqli_query($con, $select_query);
+
+$id_panier = $row['id_panier'];
 
 $totalTTC=0;
 $totalItem=0;
 
 
-function buildAllCartItems($result){
+function buildAllCartItems($result, $totalTTC, $totalItem){
         //. id_panier id_produit, quantite
 
 
@@ -21,9 +32,32 @@ function buildAllCartItems($result){
                     $itemId = $row['id_produit'];
                     $itemPrice = $row['prix'];
                     $totalItem++;
-                    $totalTCC+=$itemPrice;
+                    $totalTTC+=$itemPrice*$qty;
                     buildCartItem($itemId,$qty);
               }
+              return array($totalTTC, $totalItem);
+}
+
+if (isset($_POST['cartValidation'])){
+
+    echo $totalTTC;
+    $totalTTC = $_POST['totalTTC'];
+    echo $totalTTC;
+
+    $prixHT = $totalTTC / 1.2;
+
+
+    $insert_query="insert into `facturation` (`id_client`, `prixHT`, `prixTTC`, `id_panier`) values ('$id_client','$prixHT', '$totalTTC', '$id_panier')";
+    $result = mysqli_query($con, $insert_query);
+    if ($result){
+        $delete_query = "DELETE FROM `panier` WHERE `id_client` = '$id_client'";
+        $result = mysqli_query($con, $delete_query);
+
+        $insert_query = "insert into `panier` (id_client) values ('$id_client')";
+        $result = mysqli_query($con, $insert_query);
+
+        header("Location: index.php?cart");
+    }
 }
 
 ?>
@@ -38,7 +72,9 @@ function buildAllCartItems($result){
                 </div>
                 <div class="cartItemsCont">
                     <?php
-                    buildAllCartItems($result_select);
+                    $array = buildAllCartItems($result_select, $totalTTC, $totalItem);
+                    $totalTTC = $array[0];
+                    $totalItem = $array[1];
                     ?>
                 </div>
                 <div class="cartFooter">
@@ -51,11 +87,15 @@ function buildAllCartItems($result){
                 <p>Sous-total </p>
                 <p>(<?=$totalItem?> articles): </p>
                 <p class="cartTotal"><?=$totalTTC?>€</p>
-                <form name="cartValidation">
-                    <button class="cartCheckout">Passer la commande</button>
+                <form action="" method="post">
+                    <input type="text" hidden="hidden" value="<?= $totalTTC ?>" name="totalTTC">
+                    <button type="submit" class="cartCheckout" name="cartValidation">Passer la commande</button>
                 </form>
 
             </div>
         </div>
     </div>
 </section>
+<?php
+}
+?>

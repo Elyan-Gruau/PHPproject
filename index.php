@@ -17,6 +17,8 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
 <html lang="en">
     <head>
         <title>La Babouce*</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/general.css">
@@ -26,7 +28,8 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
         <link rel="stylesheet" href="css/cartReviewStyle.css">
         <link rel="stylesheet" href="css/userBoardStyle.css">
         <link rel="stylesheet" href="css/homeStyle.css">
-        <link rel="preload" href="font/Castellar.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/forgotStyle.css">
+        <link rel="preload" href="font/Castellar.tff" as="font" type="font/tff" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat">
@@ -42,44 +45,42 @@ if($currentpage == $homepage or $currentpage == 'index.php') {
             </a>
             <a href="index.php?cart" ><img id="cart" src="img/cart.png" alt="Cart"> </a>
             <a href="index.php?login" ><img id="connexion" src="img/profile.png" alt="profile"></a>
-            <a href="index.php?shop" class="categories">Chaussons</a>
-            <a href="index.php?board" class="categories">DebugUserBoard</a>
         </nav>
     </body>
     <footer>
 
         <div class="footerCont">
-            <p>
-                BROCOLI SoftGames ©
-                GRUAU Elyan - MAHÉ Jules
-            </p>
-            <ul>
-                <li>
-                    <a>Condition d'utilisations</a>
-                </li>
-                <li>
-                    <a>Our Team</a>
-                </li>
-                <li>
-                    <a href="https://www.flaticon.com/">Icons used</a>
-                </li>
-            </ul>
-            <p> Contact</p>
-            <ul>
-                <li>
-                    <a href="https://www.flaticon.com/">mail</a>
-                </li>
-                <li>
-                    <a href="https://www.flaticon.com/">0612458798</a>
-                </li>
-                <li>
-                    <a href="https://www.flaticon.com/">Instagram</a>
-                </li>
-                <li>
-                    <a href="https://www.flaticon.com/">Linkedin</a>
-                </li>
-            </ul>
-        </div>
-
+            <div class="footerTitle">
+                <h4>
+                    BROCOLI SoftGames ©
+                    GRUAU Elyan - MAHÉ Jules
+                </h4>
+            </div>
+            <div class="footerPart">
+                <p> Log Admin</p>
+                <ul>
+                    <li>
+                        <a href="index.php?login">amin@admin.com </a>
+                    </li>
+                    <li>
+                        <a href="index.php?login">admin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerPart">
+                <p>Github</p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/Elyan-Gruau">Elyan</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Sclus">Jules</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Elyan-Gruau/PHPproject">Le projet</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
     </footer>
 </html>

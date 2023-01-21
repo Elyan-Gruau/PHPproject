@@ -40,9 +40,7 @@ function buildAllCartItems($result, $totalTTC, $totalItem){
 
 if (isset($_POST['cartValidation'])){
 
-    echo $totalTTC;
     $totalTTC = $_POST['totalTTC'];
-    echo $totalTTC;
 
     $prixHT = $totalTTC / 1.2;
 
@@ -50,6 +48,27 @@ if (isset($_POST['cartValidation'])){
     $insert_query="insert into `facturation` (`id_client`, `prixHT`, `prixTTC`, `id_panier`) values ('$id_client','$prixHT', '$totalTTC', '$id_panier')";
     $result = mysqli_query($con, $insert_query);
     if ($result){
+
+        $select_query = "select `ap`.*, `pt`.id_produit produit_id from `panier` pan, `achat_produit` ap, `produit_taille` pt where `ap`.id_panier=`pan`.id and `pan`.id_client='$id_client' and `pt`.id = `ap`.id_produit";
+        $result_select = mysqli_query($con, $select_query);
+
+        while($row = mysqli_fetch_array($result_select)){
+
+            $qty = $row['quantite'];
+            $itemId = $row['id_produit'];
+            $product_id = $row['produit_id'];
+
+
+            $update_query = "UPDATE `produit_vendu` SET `nb_vendu` = `nb_vendu`+'$qty' WHERE `produit_vendu`.`id_produit` = '$product_id'";
+            $result_insert = mysqli_query($con, $update_query);
+
+            $update_query = "UPDATE `stock_taille` SET `stock` = `stock`-'$qty' WHERE `stock_taille`.`id_produit_taille` = '$itemId'";
+            $result_insert = mysqli_query($con, $update_query);
+
+        }
+
+
+
         $delete_query = "DELETE FROM `panier` WHERE `id_client` = '$id_client'";
         $result = mysqli_query($con, $delete_query);
 

@@ -85,7 +85,7 @@ else{
                 <form action="" method="post">
                     <h3>Déja client ?</h3>
                     <label id="customerLogEmail">Email</label>
-                    <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com" required>
+                    <input autocomplete="email" name="customerLogEmail" type="email" placeholder="exemple@lababouce.com" required>
                     <label name="customerLogPassword">Mot de passe</label>
                     <input autocomplete="password" name="customerLogPassword" type="password" placeholder="Mot de passe" required>
                     <a href="?login&forgotPass">Mot de passe oublié</a>
@@ -96,11 +96,11 @@ else{
                 <form action="" method="post">
                     <h3>Nouveau client ?</h3>
                     <label name="customerLogFirstName">Prénom</label>
-                    <input autocomplete="off" name="customerLogFirstName" type="firstname" placeholder="Roland" required>
+                    <input autocomplete="off" name="customerLogFirstName" type="firstname" placeholder="Mylène" required>
                     <label name="customerLogLastName">Nom</label>
-                    <input autocomplete="off" name="customerLogLastName" type="lastname" placeholder="Culé" required>
+                    <input autocomplete="off" name="customerLogLastName" type="lastname" placeholder="Micoton" required>
                     <label name="customerLogEmail">Email</label>
-                    <input autocomplete="off" name="customerLogEmail" type="email" placeholder="exemple@labaouce.com" required>
+                    <input autocomplete="off" name="customerLogEmail" type="email" placeholder="exemple@lababouce.com" required>
                     <label name="customerLogPassword">Mot de passe</label>
                     <input autocomplete="new-password" name="customerLogPassword" type="password" placeholder="Mot de passe" required>
 

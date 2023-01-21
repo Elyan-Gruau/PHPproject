@@ -15,7 +15,7 @@ if (isset($_POST['insert_product'])){
     $select_query = "select * from `produit` where titre='$product_title'";
     $result_select = mysqli_query($con, $select_query);
     if(mysqli_num_rows($result_select)>0){
-        echo "Il y est déjà bouffon";
+        echo "Produit déjà présent";
     }
     else{
         $insert_query="insert into `produit` (`id_marque`, `couleur`, `prixPublique`, `prixAchat`, `image`, `titre`, `descriptif`, `id_fournisseur`) values 

@@ -21,19 +21,26 @@ $admin = $row['admin'];
         <div class="centerBoardCont">
             <div class="left">
                 <h3> Bonjour <?=$prenom?></h3>
-                <a href="?orders">Historique des commandes</a>
-                <a href="?disconnect"> Se déconnecter </a>
+                <a href="?login&orders">Historique des commandes</a>
+
 
             </div>
-
-            <?php if ($admin){
-
-            ?>
             <div class="right">
-                <a href="admin_dashboard/index.php">page admin</a>
-            </div>
+                <a href="?disconnect"> Se déconnecter </a>
+            <?php if ($admin){
+            ?>
+                <div>
+                    <a href="admin_dashboard/index.php">page admin</a>
+                </div>
                 <?php
             }
+            ?>
+            </div>
+            <?php
+            if (isset($_GET['orders'])) {
+                buildOrders();
+            }
+
             ?>
         </div>
     </div>

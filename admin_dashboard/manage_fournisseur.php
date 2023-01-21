@@ -8,7 +8,7 @@ if (isset($_POST['insert_fournisseur'])) {
     $result_select = mysqli_query($con, $select_query);
 
     if (mysqli_num_rows($result_select) > 0) {
-        echo "Il y est déjà bouffon";
+        echo "Fournisseur déjà présent";
     } else {
         $insert_query = "insert into `fournisseur` (nom, email) values ('$fournisseur', '$mail_fournisseur')";
         $result = mysqli_query($con, $insert_query);

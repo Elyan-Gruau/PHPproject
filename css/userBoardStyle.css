@@ -14,3 +14,41 @@
     background-color: var(--ColCardBg);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2) ;
 }
+
+.centerBoardCont .left {
+    float: left;
+    width : 44%;
+
+}
+
+.centerBoardCont .right {
+    float: right;
+
+}
+
+table{
+    border-radius: 5px;
+    padding: 1%;
+    border: 1px solid black;
+    width: 100% ;
+    row-gap: 0;
+    column-gap: 0;
+}
+
+th {
+    text-align: left;
+
+    background-color: rgba(210,210,215);
+}
+
+tr:nth-child(even){
+    background-color: rgba(240,240,245);
+}
+
+tr:nth-child(odd){
+    background-color: rgba(230,230,235);
+}
+
+tr:hover{
+    background-color: rgba(230,230,255);
+}

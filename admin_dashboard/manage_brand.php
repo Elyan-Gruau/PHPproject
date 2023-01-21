@@ -6,7 +6,7 @@ if (isset($_POST['insert_brand'])){
     $select_query = "select * from `marque` where nom='$brand_name'";
     $result_select = mysqli_query($con, $select_query);
     if(mysqli_num_rows($result_select)>0){
-        echo "Il y est déjà bouffon";
+        echo "Marque déjà présente";
     }
     else{
         $insert_query="insert into `marque` (nom) values ('$brand_name')";

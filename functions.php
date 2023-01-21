@@ -67,14 +67,10 @@ else if (isset($_GET['board'])){
     buildBoard();
 }
 
-else if (isset($_GET['orders'])){
-    buildOrders();
-}
-
 else if (isset($_GET['disconnect'])) {
     session_destroy();
 
-    $URL = "index.php";
+    $URL = "index.php?login";
     echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 
 } else {

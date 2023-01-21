@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="bottomCont">
-            <h2>Embélissez vos pieds.</h2>
+            <h2>Embellissez vos pieds.</h2>
         </div>
     </div>
 

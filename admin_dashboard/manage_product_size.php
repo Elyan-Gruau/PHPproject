@@ -8,7 +8,7 @@ if (isset($_POST['insert_product_size'])){
     $select_query = "select * from `produit_taille` where id_produit='$product_id' and taille='$product_size'";
     $result_select = mysqli_query($con, $select_query);
     if(mysqli_num_rows($result_select)>0){
-        echo "Il y est déjà bouffon";
+        echo "Taille déjà présente pour cet article";
     }
     else{
         $insert_query="insert into `produit_taille` (`id_produit`, `taille`) values ('$product_id', '$product_size')";
